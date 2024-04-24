@@ -5,7 +5,7 @@
 #' @param height A numeric or unit object specifying the height of rows.
 #' @param space A numeric or unit object specifying the space between rows.
 #' @param n An integer specifying the number of elements to generate row 
-#' positions for.
+#' positions for..
 #' @param default.units A string indicating the default units to use
 #' if \code{y}, \code{h}, or \code{s} are only given as numerics.
 #' Default value is \code{default.units = "inches"}.
