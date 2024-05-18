@@ -24,58 +24,79 @@
 #'     params = NULL
 #' )
 #'
-#' @param chrom Chromosome of region to be plotted, as a string.
-#' @param chromstart Integer start position on chromosome to be plotted.
-#' @param chromend Integer end position on chromosome to be plotted.
-#' @param assembly Default genome assembly as a string or a
+#' @param chrom string Chromosome of region to be plotted, as a string. Default value is \code{chrom = NULL}. Options = DNE.
+#' 
+#' @param chromstart int start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Options = DNE.
+#' 
+#' @param chromend int end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Options = DNE.
+#' 
+#' @param assembly string Default genome assembly as a string or a
 #' \link[plotgardener]{assembly} object.
-#' Default value is \code{assembly = "hg38"}.
-#' @param fontsize A numeric specifying text fontsize in points.
-#' Default value is \code{fontsize = 8}.
-#' @param fontcolor A character value or vector of length 2 indicating
+#' Default value is \code{assembly = "hg38"}. Options = DNE.
+#' 
+#' @param fontsize numeric Specifying text fontsize in points.
+#' Default value is \code{fontsize = 8}. Options include \code{any numeric}
+#' 
+#' @param fontcolor string Vector of length 2 indicating
 #' the fontcolors for the plus strand and minus strand gene labels.
 #' The first value will color the plus strand gene labels and
 #' the second value will color the minus strand gene labels.
-#' Default value is \code{fontcolor = c("#669fd9", "#abcc8e")}.
-#' @param fill A character value or vector of length 2 indicating the
+#' Default value is \code{fontcolor = c("#669fd9", "#abcc8e")}. Options = hexademical vector
+#' 
+#' @param fill vector A character value or vector of length 2 indicating the
 #' strand fill colors for the plus strand and minus strand plot elements.
 #' The first value will color the plus strand plot elements and
 #' the second label will color the minus strand plot elements.
-#' Default value is \code{fill = c("#669fd9", "#abcc8e")}.
-#' @param geneOrder An ordered character vector of gene names to
-#' prioritize when labeling genes.
-#' @param geneHighlights A two-column dataframe with a column named "gene"
+#' Default value is \code{fill = c("#669fd9", "#abcc8e")}. Options = hexcode color
+#' 
+#' @param geneOrder vector An ordered character vector of gene names to
+#' prioritize when labeling genes. Default value is \code{geneOrder = NULL}.
+#' 
+#' @param geneHighlights dataframe A two-column dataframe with a column named "gene"
 #' containing gene names as strings to highlight and a named column "color"
-#' containing corresponding highlight colors.
-#' @param geneBackground If \code{geneHighlights} is given, a character
-#' value indicating the color for genes that are not highlighted.
-#' @param strandLabels A logical value indicating whether to include
-#' + and - strand labels to the left of the gene track.
-#' @param stroke A numeric value indicating the stroke width for gene
-#' body outlines. Default value is \code{stroke = 0.1}.
-#' @param bg Character value indicating background color.
-#' Default value is \code{bg = NA}.
-#' @param x A numeric or unit object specifying genes plot x-location.
-#' @param y A numeric, unit object, or character containing a "b"
+#' containing corresponding highlight colors. Default value is \code{geneHighlights = NULL}.
+#' 
+#' @param geneBackground string If \code{geneHighlights} is given, a character
+#' value indicating the color for genes that are not highlighted. Default value is \code{geneBackground = "grey"}
+#' 
+#' @param strandLabels bool A logical value indicating whether to include
+#' + and - strand labels to the left of the gene track. Default value is \code{strandLabels = TRUE}. Options = \list{TRUE, FALSE}
+#' 
+#' @param stroke numeric A numeric value indicating the stroke width for gene
+#' body outlines. Default value is \code{stroke = 0.1}. Options = any numeric.
+#' 
+#' @param bg string Character value indicating background color.
+#' Default value is \code{bg = NA}. Options = any string.
+#' 
+#' @param x numeric A numeric or unit object specifying genes plot x-location. Default value is \code{x = NULL}. Options = any numeric.
+#' 
+#' @param y numeric A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying genes plot y-location.
 #' The character value will
 #' place the genes plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying genes plot width.
-#' @param height A numeric or unit object specifying genes plot height.
+#' plotted plot according to the units of the plotgardener page. Default value is \code{y = NULL}. Options = any numeric.
+#' 
+#' @param width numeric A numeric or unit object specifying genes plot width. Default value is \code{width = NULL}. Options \code{any numeric}.
+#' 
+#' @param height numeric A numeric or unit object specifying genes plot height. Default value is \code{height = NULL}. Options \code{any numeric}.
+#' 
 #' @param just Justification of genes plot relative to its (x, y) location.
 #' If there are two values, the first value specifies horizontal
 #' justification and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = c("left", "top")}.
+#' Default value is \code{just = c("left", "top")}. Options = 2 of \list{"left "top", "left "bottom", "left "center", "right "top", "right "bottom", "right "center"}.
+#' 
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, or \code{height} are only given
-#' as numerics. Default value is \code{default.units = "inches"}.
+#' as numerics. Default value is \code{default.units = "inches"}. 
+#' Option =  \text{"inches", "centimeters"}.
+#' 
 #' @param draw A logical value indicating whether graphics output
-#' should be produced. Default value is \code{draw = TRUE}.
+#' should be produced. Default value is \code{draw = TRUE}. Options = \list{TRUE, FALSE}.
+#' 
 #' @param params An optional \link[plotgardener]{pgParams} object
-#' containing relevant function parameters.
+#' containing relevant function parameters. Default value is \code{params = NULL}.
 #'
 #' @return Returns a \code{genes} object containing
 #' relevant genomic region, placement, and \link[grid]{grob} information.
