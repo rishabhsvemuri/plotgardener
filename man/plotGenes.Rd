@@ -102,7 +102,6 @@ should be produced. Default value is \code{draw = TRUE}. Options = \list{TRUE, F
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
 containing relevant function parameters. Default value is \code{params = NULL}.
-
 \end}
 }
 \value{
