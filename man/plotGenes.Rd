@@ -101,7 +101,9 @@ Option =  \text{"inches", "centimeters"}.}
 should be produced. Default value is \code{draw = TRUE}. Options = \list{TRUE, FALSE}.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
-containing relevant function parameters. Default value is \code{params = NULL}.}
+containing relevant function parameters. Default value is \code{params = NULL}.
+
+\end}
 }
 \value{
 Returns a \code{genes} object containing

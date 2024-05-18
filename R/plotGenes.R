@@ -97,6 +97,8 @@
 #' 
 #' @param params An optional \link[plotgardener]{pgParams} object
 #' containing relevant function parameters. Default value is \code{params = NULL}.
+#' 
+#' \end
 #'
 #' @return Returns a \code{genes} object containing
 #' relevant genomic region, placement, and \link[grid]{grob} information.
