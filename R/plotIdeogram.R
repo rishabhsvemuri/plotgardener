@@ -17,8 +17,8 @@
 #'     params = NULL
 #' )
 #'
-#' @param chrom Chromosome to be plotted, as a string.
-#' @param assembly Default genome assembly as a string or a
+#' @param chrom A string specifying the chromosome to be plotted.
+#' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}.
 #' @param data Custom cytoband data, as a dataframe with the following
@@ -26,27 +26,27 @@
 #' "name", "gieStain".
 #' @param orientation Character value indicating the orientation
 #' of the ideogram. Default value is \code{orientation = "h"}.
-#' Options are:
+#' Options include: "v", "h".
 #' \itemize{
 #' \item{\code{"v"}: }{Vertical ideogram orientation.}
 #' \item{\code{"h"}: }{Horizontal ideogram orientation.}
 #' }
-#' @param showBands Logical value indicating whether to draw
+#' @param showBands A logical value indicating whether to draw
 #' colored cytobands within ideogram.
-#' Default value is \code{showBands = TRUE}.
+#' Default value is \code{showBands = TRUE}. Options include: TRUE, FALSE.
 #' @param fill (optional) A vector specifying alternate colors for cytoband
 #' stains. To change specific gieStain values (i.e. gneg, gpos, etc.) to 
 #' specific colors, this vector can be named. This vector must have the same
 #' number of colors as there are gieStain values for each genome assembly.
-#' @param x A numeric or unit object specifying ideogram x-location.
+#' @param x A numeric or unit object specifying ideogram x-location. Options include: any numeric.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying ideogram y-location.
 #' The character value will
 #' place the ideogram y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying ideogram width.
-#' @param height A numeric or unit object specifying ideogram height.
-#' @param just Justification of ideogram relative to its (x, y) location.
+#' plotted plot according to the units of the plotgardener page. Options include: any numeric.
+#' @param width A numeric or unit object specifying ideogram width. Options include: any numeric.
+#' @param height A numeric or unit object specifying ideogram height. Options include: any numeric.
+#' @param just A string specifying the justification of ideogram relative to its (x, y) location.
 #' If there are two values, the first value specifies horizontal justification
 #' and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
@@ -54,11 +54,13 @@
 #' Default value is \code{just = c("left", "top")}.
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-#' numerics. Default value is \code{default.units = "inches"}.
+#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
 #' @param draw A logical value indicating whether graphics output should be
-#' produced. Default value is \code{draw = TRUE}.
+#' produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
 #' relevant function parameters.
+#' 
+#' \end
 #'
 #' @return Returns a \code{ideogram} object containing relevant
 #' genomic region, placement, and \link[grid]{grob} information.

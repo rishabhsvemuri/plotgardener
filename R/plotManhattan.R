@@ -33,8 +33,7 @@
 #'     ...
 #' )
 #'
-#' @param data Data to be plotted, as a character value specifying a
-#' file path of GWAS data, a dataframe, or a \link[GenomicRanges]{GRanges}
+#' @param data A string .GWAS data path of data to be plotted, or a dataframe, or a \link[GenomicRanges]{GRanges}
 #' object. Each of these data types must have the following columns:
 #' \itemize{
 #' \item{\code{"chrom"}: }{Chromosome names. This column must be a character.}
@@ -48,15 +47,15 @@
 #' @param sigVal A numeric specifying the significance level of p-values.
 #' Along with data p-values, this value will be converted according to the
 #' \code{trans} parameter.
-#' Default value is \code{sigVal = 5e-08}.
-#' @param chrom Chromosome of region to be plotted, as a string.
+#' Default value is \code{sigVal = 5e-08}. Options include: any numeric
+#' @param chrom A string specifying the chromosome of region to be plotted.
 #' If left \code{NULL}, all chromosomes found in data will be plotted.
-#' @param chromstart Integer start position on chromosome to be plotted.
-#' @param chromend Integer end position on chromosome to be plotted.
-#' @param assembly Default genome assembly as a string or a
+#' @param chromstart An integer start position on chromosome to be plotted.
+#' @param chromend An integer end position on chromosome to be plotted.
+#' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}.
-#' @param fill A single character value, a vector, or a 
+#' @param fill A character value, a vector, or a 
 #' \link[plotgardener]{colorby} object specifying fill colors of data points.
 #' For a Manhattan plot with multiple chromosomes, a vector of colors 
 #' will be used to color points of different chromosomes.
@@ -64,62 +63,64 @@
 #' @param pch A numeric value or numeric vector specifying point symbols.
 #' If \link[plotgardener]{colorby} object is supplied for \code{fill},
 #' point symbols will be mapped to
-#' \code{colorby} values. Default value is \code{pch = 19}.
+#' \code{colorby} values. Default value is \code{pch = 19}. Options include: any numeric.
 #' @param cex A numeric indicating the amount by which points should be
-#' scaled relative to the default. Default value is \code{cex = 0.25}.
+#' scaled relative to the default. Default value is \code{cex = 0.25}. Options include: any numeric.
 #' @param leadSNP A list specifying the lead SNP in the desired region and
 #' any associated aesthetic features of the lead SNP data point and text label.
 #' The lead SNP should be specified as a character with the name slot
 #' \code{"snp"} in the list. Accepted lead SNP aesthetic
 #' features in the list include
 #' \code{fill}, \code{pch}, \code{cex}, \code{fontcolor}, and \code{fontsize}.
-#' @param sigLine Logical value indicating whether to draw a line at the
+#' @param sigLine A logical value indicating whether to draw a line at the
 #' significance level indicated with \code{sigVal}.
-#' Default value is \code{sigLine = FALSE}.
-#' @param sigCol Single character value specifying the color of
+#' Default value is \code{sigLine = FALSE}. Options include: TRUE, FALSE.
+#' @param sigCol A character value specifying the color of
 #' significant data points.
-#' @param trans Character value specifying the transformation to apply to the
+#' @param trans A character value specifying the transformation to apply to the
 #' "p" column plotted along the y-axis. For no transformation, set value to the 
 #' empty character "". Default value is \code{trans = "-log10"}.
 #' @param range A numeric vector of length 2 specifying the y-range
 #' of p-values to plot (c(min, max)).
-#' @param yscale_reverse Logical value indicating whether to reverse the y-scale
-#' and order points from max to min.
+#' @param yscale_reverse A logical value indicating whether to reverse the y-scale
+#' and order points from max to min. Default value is \code{yscale_reverse = FALSE}. Options include: TRUE, FALSE.
 #' @param space A numeric value indicating the space between each
 #' chromosome as a fraction of the width of the plot, if plotting multiple
-#' chromosomes. Default value is \code{space = 0.01}.
-#' @param bg Character value indicating background color.
+#' chromosomes. Default value is \code{space = 0.01}. Options include: any numeric.
+#' @param bg A character value indicating background color.
 #' Default value is \code{bg = NA}.
-#' @param baseline Logical value indicating whether to include a
-#' baseline along the x-axis. Default value is \code{baseline = FALSE}.
-#' @param baseline.color Baseline color. Default value
+#' @param baseline A logical value indicating whether to include a
+#' baseline along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE.
+#' @param baseline.color String baseline color. Default value
 #' is \code{baseline.color = "grey"}.
-#' @param baseline.lwd Baseline line width. Default value
-#' is \code{baseline.lwd = 1}.
-#' @param x A numeric or unit object specifying Manhattan plot x-location.
+#' @param baseline.lwd A numeric baseline line width. Default value
+#' is \code{baseline.lwd = 1}. Options include: any numeric.
+#' @param x A numeric or unit object specifying Manhattan plot x-location. Options include: any numeric.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying Manhattan plot y-location.
 #' The character value will
 #' place the Manhattan plot y relative to the bottom of the most
-#' recently plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying Manhattan plot width.
-#' @param height A numeric or unit object specifying Manhattan plot height.
-#' @param just Justification of Manhattan plot relative to its (x, y)
+#' recently plotted plot according to the units of the plotgardener page. Options include: any numeric.
+#' @param width A numeric or unit object specifying Manhattan plot width. Options include: any numeric.
+#' @param height A numeric or unit object specifying Manhattan plot height. Options include: any numeric.
+#' @param just A string specifying the justification of Manhattan plot relative to its (x, y)
 #' location. If there are two values, the first value specifies horizontal
 #' justification and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
 #' Default value is \code{just = c("left", "top")}.
-#' @param flip Logical value indicating whether to reflect Manhattan plot
-#' over the x-axis. Default value is \code{flip = FALSE}.
+#' @param flip A logical value indicating whether to reflect Manhattan plot
+#' over the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE.
 #' @param default.units A string indicating the default units to use
 #' if \code{x}, \code{y}, \code{width}, or \code{height} are only given
-#' as numerics. Default value is \code{default.units = "inches"}.
+#' as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
 #' @param draw A logical value indicating whether graphics output should
-#' be produced. Default value is \code{draw = TRUE}.
+#' be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
 #' relevant function parameters.
 #' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#'
+#'\end
 #'
 #' @return Returns a \code{manhattan} object containing
 #' relevant genomic region, placement, and \link[grid]{grob} information.

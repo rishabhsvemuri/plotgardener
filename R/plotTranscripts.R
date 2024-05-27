@@ -27,13 +27,13 @@
 #'     params = NULL
 #' )
 #'
-#' @param chrom Chromosome of region to be plotted, as a string.
-#' @param chromstart Integer start position on chromosome to be plotted.
-#' @param chromend Integer end position on chromosome to be plotted.
-#' @param assembly Default genome assembly as a string or a
+#' @param chrom A string specifying the chromosome of region to be plotted.
+#' @param chromstart An integer start position on chromosome to be plotted.
+#' @param chromend An integer end position on chromosome to be plotted.
+#' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}.
-#' @param fill Character value(s) as a single value or vector
+#' @param fill A character value(s) as a single value or vector
 #' specifying fill colors of transcripts.
 #' Default value is \code{fill = c("#669fd9", "#abcc8e")}.
 #' @param colorbyStrand A logical value indicating whether to
@@ -41,31 +41,31 @@
 #' a \code{fill} vector, where plus strand transcripts will be
 #' colored by the first \code{fill} color and
 #' minus strand transcripts will be colored by the second \code{fill}
-#' color. Default value is \code{colorbyStrand = TRUE}.
+#' color. Default value is \code{colorbyStrand = TRUE}. Options include: TRUE, FALSE.
 #' @param strandSplit A logical value indicating whether plus and
 #' minus-stranded transcripts should be separated, with plus strand
 #' transcripts plotted above the x-axis and minus strand transcripts
-#' plotted below the x-axis. Default value is \code{strandSplit = FALSE}.
+#' plotted below the x-axis. Default value is \code{strandSplit = FALSE}. Options include: TRUE, FALSE.
 #' @param boxHeight A numeric or unit object specifying height of transcripts.
 #' Default value is \code{boxHeight = unit(2, "mm")}.
 #' @param spaceWidth A numeric value specifying the width of minimum spacing
 #' between transcripts, as a fraction of the plot's genomic range.
-#' Default value is \code{spaceWidth = 0.02}.
+#' Default value is \code{spaceWidth = 0.02}. Options include: any numeric.
 #' @param spaceHeight A numeric value specifying the height of spacing
 #' between transcripts on different rows, as a fraction of \code{boxHeight}.
-#' Default value is \code{spaceHeight = 0.3}.
+#' Default value is \code{spaceHeight = 0.3}. Options include: any numeric.
 #' @param limitLabel A logical value indicating whether to draw a "+"
 #' when not all elements can be plotted in the plotting space. Default 
-#' value is \code{limitLabel = TRUE}.
+#' value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE.
 #' @param transcriptHighlights A two-column dataframe with a column named
 #' "transcript" or "gene" containing transcript names or their associated gene 
 #' names as strings to highlight and a column named "color" containing 
 #' corresponding highlight colors.
 #' @param fontsize A numeric specifying text fontsize in points.
-#' Default value is \code{fontsize = 8}.
+#' Default value is \code{fontsize = 8}. Options include: any numeric.
 #' @param labels A character value describing the format of
 #' transcript text labels. Default value is \code{labels = "trancript"}.
-#' Options are:
+#' Options include: NULL, "transcript", "gene", "both".
 #' \itemize{
 #' \item{\code{NULL}: }{No labels.}
 #' \item{\code{"transcript"}: }{Transcript name labels.}
@@ -74,18 +74,18 @@
 #' the format "gene name:transcript name".}
 #' }
 #' @param stroke A numeric value indicating the stroke width for
-#' transcript body outlines. Default value is \code{stroke = 0.1}.
-#' @param bg Character value indicating background color.
+#' transcript body outlines. Default value is \code{stroke = 0.1}. Options include: any numeric.
+#' @param bg A character value indicating background color.
 #' Default value is \code{bg = NA}.
-#' @param x A numeric or unit object specifying transcript plot x-location.
+#' @param x A numeric or unit object specifying transcript plot x-location. Options include: any numeric.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying transcript plot y-location.
 #' The character value will
 #' place the transcript plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying transcript plot width.
-#' @param height A numeric or unit object specifying transcript plot height.
-#' @param just Justification of transcript plot relative to
+#' plotted plot according to the units of the plotgardener page. Options include: any numeric.
+#' @param width A numeric or unit object specifying transcript plot width. Options include: any numeric.
+#' @param height A numeric or unit object specifying transcript plot height. Options include: any numeric.
+#' @param just A string specifying the justification of transcript plot relative to
 #' its (x, y) location. If there are two values, the first value specifies
 #' horizontal justification and the second value specifies vertical
 #' justification.
@@ -94,11 +94,13 @@
 #' Default value is \code{just = c("left", "top")}.
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-#' numerics. Default value is \code{default.units = "inches"}.
+#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
 #' @param draw A logical value indicating whether graphics output should be
-#' produced. Default value is \code{draw = TRUE}.
+#' produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
 #' relevant function parameters.
+#' 
+#' \end
 #'
 #' @return Returns a \code{transcripts} object containing relevant
 #' genomic region, placement, and \link[grid]{grob} information.

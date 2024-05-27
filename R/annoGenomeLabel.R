@@ -21,14 +21,14 @@
 #'     ...
 #' )
 #'
-#' @param plot Input plot to annotate genomic coordinates.
+#' @param plot A plot to annotate genomic coordinates.
 #' Genomic coordinates and assembly will be inherited from \code{plot}.
 #' @param fontsize A numeric specifying text fontsize in points.
-#' Default value is \code{fontsize = 10}.
+#' Default value is \code{fontsize = 10}. Options include: any numeric
 #' @param fontcolor A character value indicating the color for text.
-#' Default value is \code{fontcolor = "black"}.
+#' Default value is \code{fontcolor = "black"}. Options include: any character value
 #' @param linecolor A character value indicating the color of
-#' the genome label axis. Default value is \code{linecolor = "black"}.
+#' the genome label axis. Default value is \code{linecolor = "black"}. Options include: any character value
 #' @param margin A numeric or unit vector specifying space between axis
 #' and coordinate labels. Default value is \code{margin = unit(1, "mm")}.
 #' @param scale A character value indicating the scale of the coordinates

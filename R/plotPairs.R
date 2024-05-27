@@ -29,53 +29,53 @@
 #'
 #' @param data A string specifying the BEDPE file path, a dataframe
 #' in BEDPE format specifying data to be plotted, or a
-#' \link[InteractionSet]{GInteractions} object.
-#' @param chrom Chromosome of region to be plotted, as a string.
-#' @param chromstart Integer start position on chromosome to be plotted.
-#' @param chromend Integer end position on chromosome to be plotted.
-#' @param assembly Default genome assembly as a string or a
+#' \link[InteractionSet]{GInteractions} object. Options include: .BEDPE file path.
+#' @param chrom A string representing the chromosome of region to be plotted.
+#' @param chromstart A integer start position on chromosome to be plotted. Options include: any integer.
+#' @param chromend A integer end position on chromosome to be plotted. Options include: any integer.
+#' @param assembly A string specidying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}.
-#' @param fill A single character value, a vector, or 
+#' @param fill A character value, a vector, or 
 #' a \link[plotgardener]{colorby} object specifying fill colors of
 #' paired range elements. Default value is \code{fill = "#1f4297"}.
-#' @param linecolor A single character value, a vector, or a
+#' @param linecolor A  character value, a vector, or a
 #' \link[plotgardener]{colorby} object specifying the color of the lines
 #' outlining paired range elements. Default value is \code{linecolor = NA}.
-#' Special options include:
+#' Options include: NA, "fill".
 #' \itemize{
 #' \item{\code{NA}: }{No line color.}
 #' \item{\code{"fill"}: }{Same color as \code{fill}.}
 #' }
-#' @param bg Character value indicating background color.
+#' @param bg A character value indicating background color.
 #' Default value is \code{bg = NA}.
 #' @param boxHeight A numeric or unit object specifying height of boxes
 #' at either end of paired range elements.
 #' Default value is \code{boxHeight = unit(2, "mm")}.
 #' @param spaceWidth A numeric specifying the width of spacing between
 #' paired range elements, as a fraction of the plot's genomic range.
-#' Default value is \code{spaceWidth = 0.02}.
+#' Default value is \code{spaceWidth = 0.02}. Options include: any numeric.
 #' @param spaceHeight A numeric specifying the height of space between
 #' boxes of paired range elements on different rows.
-#' Default value is \code{spaceHeight = 0.3}.
+#' Default value is \code{spaceHeight = 0.3}. Options include: any numeric.
 #' @param limitLabel A logical value indicating whether to draw a "+"
 #' when not all elements can be plotted in the plotting space. Default 
-#' value is \code{limitLabel = TRUE}.
-#' @param baseline Logical value indicating whether to include a baseline
-#' along the x-axis. Default value is \code{baseline = FALSE}.
-#' @param baseline.color Baseline color.
+#' value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE.
+#' @param baseline A logical value indicating whether to include a baseline
+#' along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE.
+#' @param baseline.color A string specifying the baseline color.
 #' Default value is \code{baseline.color = "grey"}.
-#' @param baseline.lwd Baseline line width.
-#' Default value is \code{baseline.lwd = 1}.
-#' @param x A numeric or unit object specifying paired range plot x-location.
+#' @param baseline.lwd A numeric specifying the baseline line width.
+#' Default value is \code{baseline.lwd = 1}. Options include: any numeric.
+#' @param x A numeric or unit object specifying paired range plot x-location. Options include: any numeric.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying paired range plot y-location.
 #' The character value will
 #' place the paired range plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying paired range plot width.
-#' @param height A numeric or unit object specifying paired range plot height.
-#' @param just Justification of paired range plot relative
+#' plotted plot according to the units of the plotgardener page. Options include: any numeric.
+#' @param width A numeric or unit object specifying paired range plot width. Options include: any numeric.
+#' @param height A numeric or unit object specifying paired range plot height. Options include: any numeric.
+#' @param just A string specifying the hustification of paired range plot relative
 #' to its (x, y) location.
 #' If there are two values, the first value specifies horizontal
 #' justification and the second value specifies vertical justification.
@@ -86,10 +86,12 @@
 #' if \code{x}, \code{y}, \code{width}, or \code{height} are only given
 #' as numerics. Default value is \code{default.units = "inches"}.
 #' @param draw A logical value indicating whether graphics
-#' output should be produced.
+#' output should be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object
 #' containing relevant function parameters.
 #' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#' 
+#' \end
 #'
 #' @return Returns a \code{pairs} object containing relevant
 #' genomic region, placement, and \link[grid]{grob} information.

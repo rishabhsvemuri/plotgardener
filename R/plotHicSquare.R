@@ -28,36 +28,36 @@
 #'     quiet = FALSE
 #' )
 #'
-#' @param data Path to .hic file as a string or a 3-column dataframe of
+#' @param data  A string path to .hic file as a string or a 3-column dataframe of
 #' interaction counts in sparse upper triangular format.
 #' @param resolution A numeric specifying the width in
 #' basepairs of each pixel. For hic files, "auto" will attempt
 #' to choose a resolution based on the size of the region. For
 #' dataframes, "auto" will attempt to detect the resolution the
-#' dataframe contains.
+#' dataframe contains. Default value \code{resolution = "auto"}. Options include: any numeric.
 #' @param zrange A numeric vector of length 2 specifying the range
 #' of interaction scores to plot, where extreme values will be set
-#' to the max or min.
-#' @param norm Character value specifying hic data normalization method,
+#' to the max or min. Default value \code{resolution = NULL}. Options include: any numeric.
+#' @param norm A character value specifying hic data normalization method,
 #' if giving .hic file. This value must be found in the .hic file.
-#' Default value is \code{norm = "KR"}.
+#' Default value is \code{norm = "KR"}. Options include: any character value.
 #' @param matrix Character value indicating the type of matrix to output.
-#' Default value is \code{matrix = "observed"}. Options are:
+#' Default value is \code{matrix = "observed"}. Options include: "observed", "oe", "log2oe".
 #' \itemize{
 #' \item{\code{"observed"}: }{Observed counts.}
 #' \item{\code{"oe"}: }{Observed/expected counts.}
 #' \item{\code{"log2oe"}: }{Log2 transformed observed/expected counts.}
 #' }
-#' @param chrom Chromosome of region to be plotted, as a string.
-#' @param chromstart Integer start position on chromosome to be plotted.
-#' @param chromend Integer end position on chromosome to be plotted.
-#' @param altchrom Alternate chromosome for off-diagonal plotting
-#' or interchromosomal plotting, as a string.
-#' @param altchromstart Alternate chromosome integer start position
+#' @param chrom A string representing the chromosome of region to be plotted.
+#' @param chromstart An integer start position on chromosome to be plotted.
+#' @param chromend An integer end position on chromosome to be plotted.
+#' @param altchrom A string representing the alternate chromosome for off-diagonal plotting
+#' or interchromosomal plotting.
+#' @param altchromstart An integer alternate chromosome start position
 #' for off-diagonal plotting or interchromosomal plotting.
-#' @param altchromend Alternate chromosome integer end position
+#' @param altchromend An integer alternate chromosome end position
 #' for off-diagonal plotting or interchromosomal plotting.
-#' @param assembly Default genome assembly as a string or a
+#' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}.
 #' @param palette A function describing the color palette to use for
@@ -65,29 +65,28 @@
 #' Default value is
 #' \code{palette =  colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}.
 #' @param colorTrans A string specifying how to scale Hi-C colors.
-#' Options are "linear", "log", "log2", or "log10".
-#' Default value is \code{colorTrans = "linear"}.
+#' Default value is \code{colorTrans = "linear"}. Options include: "linear", "log", "log2", or "log10".
 #' @param half A character value indicating which diagonal regions to plot.
 #' For intrachromosomal plotting, options are \code{"both"}, \code{"top"},
 #' or \code{"bottom"}. For off-diagonal or interchromosomal plotting,
 #' options are \code{"top"} or \code{"bottom"}.
-#' Default value is \code{half = "both"}.
+#' Default value is \code{half = "both"}. Options include: "top", "both", "bottom".
 #' \itemize{
 #' \item{\code{"both"}: }{Both diagonal halves.}
 #' \item{\code{"top"}: }{Half above the diagonal.}
 #' \item{\code{"bottom"}: }{Half below the diagonal.}
 #' }
-#' @param bg Character value indicating background color.
-#' Default value is \code{bg = NA}.
-#' @param x A numeric or unit object specifying square Hi-C plot x-location.
+#' @param bg A character value indicating background color.
+#' Default value is \code{bg = NA}. Options include: any character value.
+#' @param x A numeric or unit object specifying square Hi-C plot x-location. Options include: any numeric.
 #' @param y A numeric, unit object, or character containing a "b" combined
 #' with a numeric value specifying square Hi-C plot y-location.
 #' The character value will
 #' place the square Hi-C plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying square Hi-C plot width.
-#' @param height A numeric or unit object specifying square Hi-C plot height.
-#' @param just Justification of square Hi-C plot relative to
+#' plotted plot according to the units of the plotgardener page. Options include: any numeric.
+#' @param width A numeric or unit object specifying square Hi-C plot width. Options include: any numeric.
+#' @param height A numeric or unit object specifying square Hi-C plot height. Options include: any numeric.
+#' @param just The justification of square Hi-C plot relative to
 #' its (x, y) location. If there are two values, the first value specifies
 #' horizontal justification and the second value specifies vertical
 #' justification.
@@ -96,12 +95,14 @@
 #' Default value is \code{just = c("left", "top")}.
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-#' numerics. Default value is \code{default.units = "inches"}.
+#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
 #' @param draw A logical value indicating whether graphics output should be
-#' produced. Default value is \code{draw = TRUE}.
+#' produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
 #' relevant function parameters.
-#' @param quiet A logical indicating whether or not to print messages.
+#' @param quiet A logical indicating whether or not to print messages. Default value is \code{quiet = FALSE}. Options include: TRUE, FALSE.
+#' 
+#' \end
 #'
 #' @return Returns a \code{hicSquare} object containing relevant
 #' genomic region, Hi-C data, placement, and \link[grid]{grob} information.

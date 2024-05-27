@@ -30,30 +30,28 @@
 #'     ...
 #' )
 #'
-#' @param data Data to be plotted; as a character value specifying
-#' a BED file path, a data frame in BED format, a character value
-#' specifying a .bam file path where a bam index file (.bam.bai)
-#' is in the same directory, or a \link[GenomicRanges]{GRanges} object.
-#' @param chrom Chromosome of region to be plotted, as a string.
-#' @param chromstart Integer start position on chromosome to be plotted.
-#' @param chromend Integer end position on chromosome to be plotted.
-#' @param assembly Default genome assembly as a string or a
+#' @param data A string .BED of .bam file path of data to be plotted, or a data frame in BED format, a character value, 
+#' or a \link[GenomicRanges]{GRanges} object.
+#' @param chrom A string specifying a chromosome of region to be plotted.
+#' @param chromstart An integer start position on chromosome to be plotted.
+#' @param chromend An integer end position on chromosome to be plotted.
+#' @param assembly A string representing the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}.
-#' @param fill A single character value, a vector, or a 
+#' @param fill A character value, a vector, or a 
 #' \link[plotgardener]{colorby} object specifying fill colors of range elements.
 #' Default value is \code{fill = "#7ecdbb"}.
-#' @param linecolor A single character value, a vector, or a
+#' @param linecolor A character value, a vector, or a
 #' \link[plotgardener]{colorby} object specifying the color of the lines
 #' outlining range elements. Default value is \code{linecolor = NA}.
-#' Special options include:
+#' Special options are:
 #' \itemize{
 #' \item{\code{NA}: }{No line color.}
 #' \item{\code{"fill"}: }{Same color as \code{fill}.}
 #' } .
 #' @param order A character value specifying how to order pileup data
 #' before assigning rows. Default value is \code{order = "width"}. Options 
-#' include:
+#' include: "width", "random".
 #' \itemize{
 #' \item{\code{"width"}: }{Ordered by decreasing width of elements.}
 #' \item{\code{"random"}: }{Ordered randomly in each function call.}
@@ -64,39 +62,39 @@
 #' If \code{collapse = TRUE}, \code{boxHeight} will be ignored and elements
 #' will be the height of the entire plot if \code{strandSplit = FALSE} or
 #' be the height of half of the entire plot if \code{strandSplit = TRUE}.
-#' Default value is \code{collapse = FALSE}.
+#' Default value is \code{collapse = FALSE}. Options include: TRUE, FALSE.
 #' @param boxHeight A numeric or unit object specifying height of range element
 #' boxes. Default value is \code{boxHeight = unit(2, "mm")}.
 #' @param spaceWidth A numeric value specifying the width of minimum spacing
 #' between range element boxes, as a fraction of the plot's genomic range.
-#' Default value is \code{spaceWidth = 0.02}.
+#' Default value is \code{spaceWidth = 0.02}. Options include: any numeric.
 #' @param spaceHeight A numeric value specifying the height of spacing between
 #' range element boxes on different rows, as a fraction of boxHeight.
-#' Default value is \code{spaceHeight = 0.3}.
+#' Default value is \code{spaceHeight = 0.3}. Options include: any numeric.
 #' @param limitLabel A logical value indicating whether to draw a "+"
 #' when not all elements can be plotted in the plotting space. Default 
-#' value is \code{limitLabel = TRUE}.
+#' value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE.
 #' @param strandSplit A logical value indicating whether plus and
 #' minus-stranded elements should be separated. Elements can only be
 #' split by strand if a \code{strand} column is found in \code{data}.
-#' Default value is \code{strandSplit = FALSE}.
-#' @param bg Character value indicating background color.
+#' Default value is \code{strandSplit = FALSE}. Options include: TRUE, FALSE.
+#' @param bg A character value indicating background color.
 #' Default value is \code{bg = NA}.
-#' @param baseline Logical value indicating whether to include a
-#' baseline along the x-axis. Default value is \code{baseline = FALSE}.
-#' @param baseline.color Baseline color.
+#' @param baseline  A logical value indicating whether to include a
+#' baseline along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE.
+#' @param baseline.color A string baseline color.
 #' Default value is \code{baseline.color = "grey"}.
-#' @param baseline.lwd Baseline line width.
-#' Default value is \code{baseline.lwd = 1}.
-#' @param x A numeric or unit object specifying ranges plot x-location.
+#' @param baseline.lwd A numeric baseline line width.
+#' Default value is \code{baseline.lwd = 1}. Options include: any numeric.
+#' @param x A numeric or unit object specifying ranges plot x-location. Options include: any numeric.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying ranges plot y-location.
 #' The character value will
 #' place the ranges plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying ranges plot width.
-#' @param height A numeric or unit object specifying ranges plot height.
-#' @param just Justification of ranges plot relative to its (x, y) location.
+#' plotted plot according to the units of the plotgardener page. Options include: any numeric.
+#' @param width A numeric or unit object specifying ranges plot width. Options include: any numeric.
+#' @param height A numeric or unit object specifying ranges plot height. Options include: any numeric.
+#' @param just A string specifying the justification of ranges plot relative to its (x, y) location.
 #' If there are two values, the first value specifies horizontal
 #' justification and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
@@ -104,12 +102,14 @@
 #' Default value is \code{just = c("left", "top")}.
 #' @param default.units A string indicating the default units to use
 #' if \code{x}, \code{y}, \code{width}, or \code{height} are only given
-#' as numerics. Default value is \code{default.units = "inches"}.
+#' as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
 #' @param draw A logical value indicating whether graphics output should
-#' be produced. Default value \code{draw = TRUE}.
+#' be produced. Default value \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object
 #' containing relevant function parameters.
 #' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#'
+#'\end
 #'
 #' @return Returns a \code{ranges} object containing relevant
 #' genomic region, coloring data, placement, and \link[grid]{grob} information.

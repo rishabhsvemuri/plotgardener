@@ -31,23 +31,22 @@
 #'     ...
 #' )
 #'
-#' @param data Data to be plotted as a character value specifying a
-#' bigwig file path, a dataframe in BED format, or a
+#' @param data A string bigwig file path to be plotted, or a dataframe in BED format, or a
 #' \link[GenomicRanges]{GRanges} object with metadata column \code{score}.
 #' Either one \code{data} argument or a list of two can be provided, where
 #' the second \code{data} will be plotted below the x-axis if positive.
 #' The second \code{data} can also be negative data.
 #' @param binSize A numeric specifying the length of each data
-#' bin in basepairs. Default value is \code{binSize = NA}.
+#' bin in basepairs. Default value is \code{binSize = NA}. Options include: any numeric.
 #' @param binCap A logical value indicating whether the function will
 #' limit the number of data bins to 8,000.
-#' Default value is \code{binCap = TRUE}.
+#' Default value is \code{binCap = TRUE}. Options include: TRUE, FALSE.
 #' @param negData A logical value indicating whether the provided data has 
-#' negative scores. Default value is \code{negData = FALSE}.
-#' @param chrom Chromosome of region to be plotted, as a string.
-#' @param chromstart Integer start position on chromosome to be plotted.
-#' @param chromend Integer end position on chromosome to be plotted.
-#' @param assembly Default genome assembly as a string or a
+#' negative scores. Default value is \code{negData = FALSE}. Options include: TRUE, FALSE.
+#' @param chrom A string specifying the chromosome of region to be plotted.
+#' @param chromstart An integer start position on chromosome to be plotted.
+#' @param chromend An integer end position on chromosome to be plotted.
+#' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}.
 #' @param linecolor A character value or vector of length 2 specifying the
@@ -56,40 +55,40 @@
 #' @param fill A character value or vector of length 2 specifying
 #' the fill color(s) of the signal track(s). Default value is \code{fill = NA}.
 #' @param ymax A numeric specifying the fraction of the max y-value
-#' to set as the height of the plot. Default value is \code{ymax = 1}.
+#' to set as the height of the plot. Default value is \code{ymax = 1}. Options include: any numeric.
 #' @param range A numeric vector of length 2 specifying the y-range
 #' of data to plot (c(min, max)).
 #' @param scale A logical value indicating whether to include a data
 #' scale label in the top left corner of the plot.
-#' Default value is \code{scale = FALSE}.
+#' Default value is \code{scale = FALSE}. Options include: TRUE, FALSE.
 #' @param label An optional character value to conveniently add a text label
 #' to the plot. If \code{scale = TRUE}, the label will be draw in the top right
 #' of the plot. Otherwise, the label will be drawn in the top left of the plot.
 #' For more customizable labels, use \link[plotgardener]{plotText}.
 #' Default value is \code{label = NULL}. 
-#' @param bg Character value indicating background color.
+#' @param bg A character value indicating background color.
 #' Default value is \code{bg = NA}.
-#' @param baseline Logical value indicating whether to include a
-#' baseline along the x-axis. Default value is \code{baseline = TRUE}.
-#' @param baseline.color Baseline color.
+#' @param baseline A logical value indicating whether to include a
+#' baseline along the x-axis. Default value is \code{baseline = TRUE}. Options include: TRUE, FALSE.
+#' @param baseline.color A string baseline color.
 #' Default value is \code{baseline.color = "grey"}.
-#' @param baseline.lwd Baseline line width.
-#' Default value is \code{baseline.lwd = 1}.
+#' @param baseline.lwd A numeric baseline line width.
+#' Default value is \code{baseline.lwd = 1}. Options include: any numeric.
 #' @param orientation A string specifying signal track orientation.
-#' Default value is \code{orientation = "h"}. Options are:
+#' Default value is \code{orientation = "h"}. Options include: "h", "v".
 #' \itemize{
 #' \item{\code{"v"}: }{Vertical signal track orientation.}
 #' \item{\code{"h"}: }{Horizontal signal track orientation.}
 #' }
-#' @param x A numeric or unit object specifying signal plot x-location.
+#' @param x A numeric or unit object specifying signal plot x-location. Options include: any numeric.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying signal plot y-location.
 #' The character value will
 #' place the signal plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying signal plot width.
-#' @param height A numeric or unit object specifying signal plot height.
-#' @param just Justification of signal plot relative to its (x, y) location.
+#' plotted plot according to the units of the plotgardener page. Options include: any numeric.
+#' @param width A numeric or unit object specifying signal plot width. Options include: any numeric.
+#' @param height A numeric or unit object specifying signal plot height. Options include: any numeric.
+#' @param just A string specifying the justification of signal plot relative to its (x, y) location.
 #' If there are two values, the first value specifies horizontal justification
 #' and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
@@ -97,12 +96,14 @@
 #' Default value is \code{just = c("left", "top")}.
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-#' numerics. Default value is \code{default.units = "inches"}.
+#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
 #' @param draw A logical value indicating whether graphics output should be
-#' produced. Default value \code{draw = TRUE}.
+#' produced. Default value \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
 #' relevant function parameters.
 #' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#' 
+#' \end
 #'
 #' @return Returns a \code{signal} object containing relevant
 #' genomic region, placement, and \link[grid]{grob} information.

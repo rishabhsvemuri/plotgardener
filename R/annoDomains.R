@@ -9,14 +9,14 @@
 #'     ...
 #' )
 #'
-#' @param plot Hi-C plot object from \code{plotHicSquare} or
+#' @param plot A Hi-C plot object from \code{plotHicSquare} or
 #' \code{plotHicTriangle} on which to annotate pixels.
 #' @param data A string specifying the BED file path, a dataframe in BED
 #' format, or a \link[GenomicRanges]{GRanges} object specifying
 #' domain ranges.
-#' @param half Character value specifying which half of hic plots
+#' @param half A character value specifying which half of hic plots
 #' to annotate. Triangle Hi-C plots will always default to the entirety of
-#' the triangular plot. Default value is \code{half = "inherit"}. Options are:
+#' the triangular plot. Default value is \code{half = "inherit"}. Options include: "inherit", "both", "top", "bottom".
 #' \itemize{
 #' \item{\code{"inherit"}: }{Domains will be annotated on the \code{half}
 #' inherited by the input Hi-C plot.}
@@ -28,10 +28,12 @@
 #' half of a square Hi-C plot.}
 #' }
 #' @param linecolor A character value specifying the color of the domain
-#' annotations. Default value is \code{linecolor = "black"}.
+#' annotations. Default value is \code{linecolor = "black"}. Options include: any character value
 #' @param params An optional \link[plotgardener]{pgParams} object
 #' containing relevant function parameters.
 #' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#'
+#'\end
 #'
 #' @return Returns a \code{domain} object containing relevant
 #' genomic region, placement, and \link[grid]{grob} information.
