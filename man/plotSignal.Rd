@@ -36,30 +36,29 @@ plotSignal(
 )
 }
 \arguments{
-\item{data}{Data to be plotted as a character value specifying a
-bigwig file path, a dataframe in BED format, or a
+\item{data}{A string bigwig file path to be plotted, or a dataframe in BED format, or a
 \link[GenomicRanges]{GRanges} object with metadata column \code{score}.
 Either one \code{data} argument or a list of two can be provided, where
 the second \code{data} will be plotted below the x-axis if positive.
 The second \code{data} can also be negative data.}
 
 \item{binSize}{A numeric specifying the length of each data
-bin in basepairs. Default value is \code{binSize = NA}.}
+bin in basepairs. Default value is \code{binSize = NA}. Options include: any numeric.}
 
 \item{binCap}{A logical value indicating whether the function will
 limit the number of data bins to 8,000.
-Default value is \code{binCap = TRUE}.}
+Default value is \code{binCap = TRUE}. Options include: TRUE, FALSE.}
 
 \item{negData}{A logical value indicating whether the provided data has 
-negative scores. Default value is \code{negData = FALSE}.}
+negative scores. Default value is \code{negData = FALSE}. Options include: TRUE, FALSE.}
 
-\item{chrom}{Chromosome of region to be plotted, as a string.}
+\item{chrom}{A string specifying the chromosome of region to be plotted.}
 
-\item{chromstart}{Integer start position on chromosome to be plotted.}
+\item{chromstart}{An integer start position on chromosome to be plotted.}
 
-\item{chromend}{Integer end position on chromosome to be plotted.}
+\item{chromend}{An integer end position on chromosome to be plotted.}
 
-\item{assembly}{Default genome assembly as a string or a
+\item{assembly}{A string specifying the default genome assembly or a
 \link[plotgardener]{assembly} object.
 Default value is \code{assembly = "hg38"}.}
 
@@ -71,14 +70,14 @@ Default value is \code{linecolor = "#37a7db"}.}
 the fill color(s) of the signal track(s). Default value is \code{fill = NA}.}
 
 \item{ymax}{A numeric specifying the fraction of the max y-value
-to set as the height of the plot. Default value is \code{ymax = 1}.}
+to set as the height of the plot. Default value is \code{ymax = 1}. Options include: any numeric.}
 
 \item{range}{A numeric vector of length 2 specifying the y-range
 of data to plot (c(min, max)).}
 
 \item{scale}{A logical value indicating whether to include a data
 scale label in the top left corner of the plot.
-Default value is \code{scale = FALSE}.}
+Default value is \code{scale = FALSE}. Options include: TRUE, FALSE.}
 
 \item{label}{An optional character value to conveniently add a text label
 to the plot. If \code{scale = TRUE}, the label will be draw in the top right
@@ -86,38 +85,38 @@ of the plot. Otherwise, the label will be drawn in the top left of the plot.
 For more customizable labels, use \link[plotgardener]{plotText}.
 Default value is \code{label = NULL}.}
 
-\item{bg}{Character value indicating background color.
+\item{bg}{A character value indicating background color.
 Default value is \code{bg = NA}.}
 
-\item{baseline}{Logical value indicating whether to include a
-baseline along the x-axis. Default value is \code{baseline = TRUE}.}
+\item{baseline}{A logical value indicating whether to include a
+baseline along the x-axis. Default value is \code{baseline = TRUE}. Options include: TRUE, FALSE.}
 
-\item{baseline.color}{Baseline color.
+\item{baseline.color}{A string baseline color.
 Default value is \code{baseline.color = "grey"}.}
 
-\item{baseline.lwd}{Baseline line width.
-Default value is \code{baseline.lwd = 1}.}
+\item{baseline.lwd}{A numeric baseline line width.
+Default value is \code{baseline.lwd = 1}. Options include: any numeric.}
 
 \item{orientation}{A string specifying signal track orientation.
-Default value is \code{orientation = "h"}. Options are:
+Default value is \code{orientation = "h"}. Options include: "h", "v".
 \itemize{
 \item{\code{"v"}: }{Vertical signal track orientation.}
 \item{\code{"h"}: }{Horizontal signal track orientation.}
 }}
 
-\item{x}{A numeric or unit object specifying signal plot x-location.}
+\item{x}{A numeric or unit object specifying signal plot x-location. Options include: any numeric.}
 
 \item{y}{A numeric, unit object, or character containing a "b"
 combined with a numeric value specifying signal plot y-location.
 The character value will
 place the signal plot y relative to the bottom of the most recently
-plotted plot according to the units of the plotgardener page.}
+plotted plot according to the units of the plotgardener page. Options include: any numeric.}
 
-\item{width}{A numeric or unit object specifying signal plot width.}
+\item{width}{A numeric or unit object specifying signal plot width. Options include: any numeric.}
 
-\item{height}{A numeric or unit object specifying signal plot height.}
+\item{height}{A numeric or unit object specifying signal plot height. Options include: any numeric.}
 
-\item{just}{Justification of signal plot relative to its (x, y) location.
+\item{just}{A string specifying the justification of signal plot relative to its (x, y) location.
 If there are two values, the first value specifies horizontal justification
 and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
@@ -126,15 +125,17 @@ Default value is \code{just = c("left", "top")}.}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-numerics. Default value is \code{default.units = "inches"}.}
+numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".}
 
 \item{draw}{A logical value indicating whether graphics output should be
-produced. Default value \code{draw = TRUE}.}
+produced. Default value \code{draw = TRUE}. Options include: TRUE, FALSE.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object containing
 relevant function parameters.}
 
-\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}.}
+\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}.
+
+\end}
 }
 \value{
 Returns a \code{signal} object containing relevant

@@ -30,30 +30,30 @@ plotGenomeLabel(
 )
 }
 \arguments{
-\item{chrom}{Chromosome of genome label, as a string,
+\item{chrom}{A string representing the Chromosome of genome label
 or a character vector of chromosomes for a whole genome Manhattan plot.}
 
-\item{chromstart}{Integer start of genome label.}
+\item{chromstart}{An integer start of genome label. Options include: any integer.}
 
-\item{chromend}{Integer end of genome label.}
+\item{chromend}{An integer end of genome label. Options include: any integer.}
 
-\item{assembly}{Default genome assembly as a string or a
+\item{assembly}{A string specifying the default genome assembly or a
 \link[plotgardener]{assembly} object.}
 
 \item{fontsize}{A numeric specifying text fontsize in points.
-Default value is \code{fontsize = 10}.}
+Default value is \code{fontsize = 10}. Options include: any numeric.}
 
 \item{fontcolor}{A character value indicating the color for text.
-Default value is \code{fontcolor = "black"}.}
+Default value is \code{fontcolor = "black"}. Options include: any character value.}
 
 \item{linecolor}{A character value indicating the color of
-the genome label axis. Default value is \code{linecolor = "black"}.}
+the genome label axis. Default value is \code{linecolor = "black"}. Options include: any character value.}
 
 \item{margin}{A numeric or unit vector specifying space between axis
 and coordinate labels. Default value is \code{margin = unit(1, "mm")},}
 
 \item{scale}{A character value indicating the scale of the coordinates
-along the genome label. Default value is \code{scale = "bp"}. Options are:
+along the genome label. Default value is \code{scale = "bp"}. Options include: "bp", "Kb", "Mb".
 \itemize{
 \item{\code{"bp"}: }{base pairs.}
 \item{\code{"Kb"}: }{kilobase pairs. 1 kilobase pair is equal to
@@ -63,19 +63,19 @@ along the genome label. Default value is \code{scale = "bp"}. Options are:
 }}
 
 \item{commas}{A logical value indicating whether to include commas in
-start and stop labels. Default value is \code{commas = TRUE}.}
+start and stop labels. Default value is \code{commas = TRUE}. Options include: TRUE, FALSE.}
 
 \item{sequence}{A logical value indicating whether to include sequence
-information above the label of an x-axis (only at appropriate resolutions).}
+information above the label of an x-axis (only at appropriate resolutions). Default value is \code{sequence = TRUE}. Options include: TRUE, FALSE.}
 
 \item{boxWidth}{A numeric value indicating the width of the boxes
 representing sequence information at appropriate resolutions.
-Default value is \code{boxWidth = 0.5}.}
+Default value is \code{boxWidth = 0.5}. Options include: any numeric.}
 
 \item{axis}{A character value indicating along which axis to
 add genome label. Sequence information will not be displayed along a y-axis.
 Default value is \code{axis = "x"}.
-Options are:
+Options include: "x", "y".
 \itemize{
 \item{\code{"x"}: }{Genome label will be plotted along the x-axis.}
 \item{\code{"y"}: }{Genome label will be plotted along the y-axis.
@@ -86,20 +86,20 @@ This is typically used for a square Hi-C plot made with
 \item{at}{A numeric vector of x-value locations for tick marks.}
 
 \item{tcl}{A numeric specifying the length of tickmarks as a
-fraction of text height. Default value is \code{tcl = 0.5}.}
+fraction of text height. Default value is \code{tcl = 0.5}. Options include: any numeric.}
 
-\item{x}{A numeric or unit object specifying genome label x-location.}
+\item{x}{A numeric or unit object specifying genome label x-location. Options include: any numeric.}
 
 \item{y}{A numeric, unit object, or character containing a "b"
 combined with a numeric value specifying genome label y-location.
 The character value will
 place the genome label y relative to the bottom of the most recently
-plotted plot according to the units of the plotgardener page.}
+plotted plot according to the units of the plotgardener page. Options include: any numeric.}
 
 \item{length}{A numeric or unit object specifying length of
-genome label axis.}
+genome label axis. Options include: any numeric.}
 
-\item{just}{Justification of genome label relative to its (x, y)
+\item{just}{A string specifying the justification of genome label relative to its (x, y)
 location. If there are two values, the first value specifies horizontal
 justification and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
@@ -108,13 +108,15 @@ and \code{"top"}. Default value is \code{just = c("left", "top")}.}
 
 \item{default.units}{A string indicating the default units to
 use if \code{x}, \code{y}, or \code{length} are only given as numerics.
-Default value is \code{default.units = "inches"}.}
+Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters"}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
 containing relevant function parameters.}
 
 \item{...}{Additional grid graphical parameters or digit specifications.
-See \link[grid]{gpar} and \link[base]{formatC}.}
+See \link[grid]{gpar} and \link[base]{formatC}.
+
+\end}
 }
 \value{
 Returns a \code{genomeLabel} object containing

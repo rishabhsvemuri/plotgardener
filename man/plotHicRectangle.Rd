@@ -30,38 +30,38 @@ plotHicRectangle(
 )
 }
 \arguments{
-\item{data}{Path to .hic file as a string or a 3-column dataframe of
+\item{data}{A string path to .hic file as a string or a 3-column dataframe of
 interaction counts in sparse upper triangular format.}
 
 \item{resolution}{A numeric specifying the width in basepairs
 of each pixel. For hic files, "auto" will attempt to choose a
 resolution based on the size of the region. For
 dataframes, "auto" will attempt to detect the resolution the
-dataframe contains.}
+dataframe contains. Default value is \code{resolution = "auto"}. Options include: any numeric.}
 
 \item{zrange}{A numeric vector of length 2 specifying the range of
 interaction scores to plot, where extreme values will be set to the
-max or min.}
+max or min. Default value is \code{zrange = NULL}.}
 
-\item{norm}{Character value specifying hic data normalization method,
+\item{norm}{A character value specifying hic data normalization method,
 if giving .hic file. This value must be found in the .hic file.
 Default value is \code{norm = "KR"}.}
 
-\item{matrix}{Character value indicating the type of matrix to output.
-Default value is \code{matrix = "observed"}. Options are:
+\item{matrix}{A character value indicating the type of matrix to output.
+Default value is \code{matrix = "observed"}. Options include: "observed", "oe", "log2oe".
 \itemize{
 \item{\code{"observed"}: }{Observed counts.}
 \item{\code{"oe"}: }{Observed/expected counts.}
 \item{\code{"log2oe"}: }{Log2 transformed observed/expected counts.}
 }}
 
-\item{chrom}{Chromosome of region to be plotted, as a string.}
+\item{chrom}{A string representing the chromosome of region to be plotted.}
 
-\item{chromstart}{Integer start position on chromosome to be plotted.}
+\item{chromstart}{A integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Options include: any integer.}
 
-\item{chromend}{Integer end position on chromosome to be plotted.}
+\item{chromend}{A integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Options include: any integer.}
 
-\item{assembly}{Default genome assembly as a string or a
+\item{assembly}{A string representing the eefault genome assembly or a
 \link[plotgardener]{assembly} object.
 Default value is \code{assembly = "hg38"}.}
 
@@ -70,31 +70,30 @@ representing scale of interaction scores. Default value is
 \code{palette =  colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}.}
 
 \item{colorTrans}{A string specifying how to scale Hi-C colors.
-Options are "linear", "log", "log2", or "log10".
-Default value is \code{colorTrans = "linear"}.}
+Default value is \code{colorTrans = "linear"}. Options include: "linear", "log", "log2", "log10".}
 
 \item{flip}{A logical indicating whether to flip the orientation of
-the Hi-C matrix over the x-axis. Default value is \code{flip = FALSE}.}
+the Hi-C matrix over the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE.}
 
-\item{bg}{Character value indicating background color.
+\item{bg}{A character value indicating background color.
 Default value is \code{bg = NA}.}
 
 \item{x}{A numeric or unit object specifying rectangle
-Hi-C plot x-location.}
+Hi-C plot x-location. Options include: any numeric.}
 
 \item{y}{A numeric, unit object, or character containing a "b" combined
 with a numeric value specifying rectangle Hi-C plot y-location.
 The character value will
 place the rectangle Hi-C plot y relative to the bottom of the most
-recently plotted plot according to the units of the plotgardener page.}
+recently plotted plot according to the units of the plotgardener page. Options include: any numeric.}
 
 \item{width}{A numeric or unit object specifying the width of the
-Hi-C plot rectangle.}
+Hi-C plot rectangle. Options include: any numeric.}
 
 \item{height}{A numeric or unit object specifying the height of the
-Hi-C plot rectangle.}
+Hi-C plot rectangle. Options include: any numeric.}
 
-\item{just}{Justification of rectangle Hi-C plot relative to
+\item{just}{A string specifying the justification of rectangle Hi-C plot relative to
 its (x, y) location. If there are two values, the first value
 specifies horizontal justification and the second value specifies
 vertical justification.
@@ -104,15 +103,17 @@ Default value is \code{just = c("left", "top")}.}
 
 \item{default.units}{A string indicating the default units to use
 if \code{x}, \code{y}, \code{width}, or \code{height} are only given
-as numerics. Default value is \code{default.units = "inches"}.}
+as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters"}
 
 \item{draw}{A logical value indicating whether graphics output should
-be produced. Default value is \code{draw = TRUE}.}
+be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object containing
 relevant function parameters.}
 
-\item{quiet}{A logical indicating whether or not to print messages.}
+\item{quiet}{A logical indicating whether or not to print messages. Default value is \code{quiet = FALSE}. Options include: TRUE, FALSE.
+
+\end}
 }
 \value{
 Returns a \code{hicRectangle} object containing

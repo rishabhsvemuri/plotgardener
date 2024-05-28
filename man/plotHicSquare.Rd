@@ -33,47 +33,47 @@ plotHicSquare(
 )
 }
 \arguments{
-\item{data}{Path to .hic file as a string or a 3-column dataframe of
+\item{data}{A string path to .hic file as a string or a 3-column dataframe of
 interaction counts in sparse upper triangular format.}
 
 \item{resolution}{A numeric specifying the width in
 basepairs of each pixel. For hic files, "auto" will attempt
 to choose a resolution based on the size of the region. For
 dataframes, "auto" will attempt to detect the resolution the
-dataframe contains.}
+dataframe contains. Default value \code{resolution = "auto"}. Options include: any numeric.}
 
 \item{zrange}{A numeric vector of length 2 specifying the range
 of interaction scores to plot, where extreme values will be set
-to the max or min.}
+to the max or min. Default value \code{resolution = NULL}. Options include: any numeric.}
 
-\item{norm}{Character value specifying hic data normalization method,
+\item{norm}{A character value specifying hic data normalization method,
 if giving .hic file. This value must be found in the .hic file.
-Default value is \code{norm = "KR"}.}
+Default value is \code{norm = "KR"}. Options include: any character value.}
 
 \item{matrix}{Character value indicating the type of matrix to output.
-Default value is \code{matrix = "observed"}. Options are:
+Default value is \code{matrix = "observed"}. Options include: "observed", "oe", "log2oe".
 \itemize{
 \item{\code{"observed"}: }{Observed counts.}
 \item{\code{"oe"}: }{Observed/expected counts.}
 \item{\code{"log2oe"}: }{Log2 transformed observed/expected counts.}
 }}
 
-\item{chrom}{Chromosome of region to be plotted, as a string.}
+\item{chrom}{A string representing the chromosome of region to be plotted.}
 
-\item{chromstart}{Integer start position on chromosome to be plotted.}
+\item{chromstart}{An integer start position on chromosome to be plotted.}
 
-\item{chromend}{Integer end position on chromosome to be plotted.}
+\item{chromend}{An integer end position on chromosome to be plotted.}
 
-\item{altchrom}{Alternate chromosome for off-diagonal plotting
-or interchromosomal plotting, as a string.}
+\item{altchrom}{A string representing the alternate chromosome for off-diagonal plotting
+or interchromosomal plotting.}
 
-\item{altchromstart}{Alternate chromosome integer start position
+\item{altchromstart}{An integer alternate chromosome start position
 for off-diagonal plotting or interchromosomal plotting.}
 
-\item{altchromend}{Alternate chromosome integer end position
+\item{altchromend}{An integer alternate chromosome end position
 for off-diagonal plotting or interchromosomal plotting.}
 
-\item{assembly}{Default genome assembly as a string or a
+\item{assembly}{A string specifying the default genome assembly or a
 \link[plotgardener]{assembly} object.
 Default value is \code{assembly = "hg38"}.}
 
@@ -83,36 +83,35 @@ Default value is
 \code{palette =  colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}.}
 
 \item{colorTrans}{A string specifying how to scale Hi-C colors.
-Options are "linear", "log", "log2", or "log10".
-Default value is \code{colorTrans = "linear"}.}
+Default value is \code{colorTrans = "linear"}. Options include: "linear", "log", "log2", or "log10".}
 
 \item{half}{A character value indicating which diagonal regions to plot.
 For intrachromosomal plotting, options are \code{"both"}, \code{"top"},
 or \code{"bottom"}. For off-diagonal or interchromosomal plotting,
 options are \code{"top"} or \code{"bottom"}.
-Default value is \code{half = "both"}.
+Default value is \code{half = "both"}. Options include: "top", "both", "bottom".
 \itemize{
 \item{\code{"both"}: }{Both diagonal halves.}
 \item{\code{"top"}: }{Half above the diagonal.}
 \item{\code{"bottom"}: }{Half below the diagonal.}
 }}
 
-\item{bg}{Character value indicating background color.
-Default value is \code{bg = NA}.}
+\item{bg}{A character value indicating background color.
+Default value is \code{bg = NA}. Options include: any character value.}
 
-\item{x}{A numeric or unit object specifying square Hi-C plot x-location.}
+\item{x}{A numeric or unit object specifying square Hi-C plot x-location. Options include: any numeric.}
 
 \item{y}{A numeric, unit object, or character containing a "b" combined
 with a numeric value specifying square Hi-C plot y-location.
 The character value will
 place the square Hi-C plot y relative to the bottom of the most recently
-plotted plot according to the units of the plotgardener page.}
+plotted plot according to the units of the plotgardener page. Options include: any numeric.}
 
-\item{width}{A numeric or unit object specifying square Hi-C plot width.}
+\item{width}{A numeric or unit object specifying square Hi-C plot width. Options include: any numeric.}
 
-\item{height}{A numeric or unit object specifying square Hi-C plot height.}
+\item{height}{A numeric or unit object specifying square Hi-C plot height. Options include: any numeric.}
 
-\item{just}{Justification of square Hi-C plot relative to
+\item{just}{The justification of square Hi-C plot relative to
 its (x, y) location. If there are two values, the first value specifies
 horizontal justification and the second value specifies vertical
 justification.
@@ -122,15 +121,17 @@ Default value is \code{just = c("left", "top")}.}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-numerics. Default value is \code{default.units = "inches"}.}
+numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".}
 
 \item{draw}{A logical value indicating whether graphics output should be
-produced. Default value is \code{draw = TRUE}.}
+produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object containing
 relevant function parameters.}
 
-\item{quiet}{A logical indicating whether or not to print messages.}
+\item{quiet}{A logical indicating whether or not to print messages. Default value is \code{quiet = FALSE}. Options include: TRUE, FALSE.
+
+\end}
 }
 \value{
 Returns a \code{hicSquare} object containing relevant
