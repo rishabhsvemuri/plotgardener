@@ -29,30 +29,30 @@ plotGenes(
 )
 }
 \arguments{
-\item{chrom}{A string representing the chromosome region to be plotted. Default value is \code{chrom = NULL}. Options include: DNE.}
+\item{chrom}{A string representing the chromosome region to be plotted. Default value is \code{chrom = NULL}.}
 
-\item{chromstart}{An int start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Options include: DNE.}
+\item{chromstart}{An int start position on chromosome to be plotted. Default value is \code{chromstart = NULL}.}
 
-\item{chromend}{An int end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Options include: DNE.}
+\item{chromend}{An int end position on chromosome to be plotted. Default value is \code{chromend = NULL}.}
 
 \item{assembly}{A string represnting the default genome assembly as a string or a
 \link[plotgardener]{assembly} object.
-Default value is \code{assembly = "hg38"}. Options include: DNE.}
+Default value is \code{assembly = "hg38"}.}
 
 \item{fontsize}{A numeric specifying text fontsize in points.
-Default value is \code{fontsize = 8}. Options include: any numeric.}
+Default value is \code{fontsize = 8}.}
 
 \item{fontcolor}{A string or vector of length 2 indicating
 the fontcolors for the plus strand and minus strand gene labels.
 The first value will color the plus strand gene labels and
 the second value will color the minus strand gene labels.
-Default value is \code{fontcolor = c("#669fd9", "#abcc8e")}. Options include: hexcode vector.}
+Default value is \code{fontcolor = c("#669fd9", "#abcc8e")}.}
 
 \item{fill}{A string or vector of length 2 indicating the
 strand fill colors for the plus strand and minus strand plot elements.
 The first value will color the plus strand plot elements and
 the second label will color the minus strand plot elements.
-Default value is \code{fill = c("#669fd9", "#abcc8e")}. Options include: hexcode color.}
+Default value is \code{fill = c("#669fd9", "#abcc8e")}.}
 
 \item{geneOrder}{A vector (ordered character) of gene names to
 prioritize when labeling genes. Default value is \code{geneOrder = NULL}.}
@@ -67,40 +67,40 @@ containing corresponding highlight colors. Default value is \code{geneHighlights
 + and - strand labels to the left of the gene track. Default value is \code{strandLabels = TRUE}. Options include: TRUE, FALSE.}
 
 \item{stroke}{A numeric value indicating the stroke width for gene
-body outlines. Default value is \code{stroke = 0.1}. Options include: any numeric.}
+body outlines. Default value is \code{stroke = 0.1}.}
 
 \item{bg}{A string indicating background color.
-Default value is \code{bg = NA}. Options include: any string.}
+Default value is \code{bg = NA}.}
 
-\item{x}{A numeric or unit object specifying genes plot x-location. Default value is \code{x = NULL}. Options include: any numeric.}
+\item{x}{A numeric or unit object specifying genes plot x-location. Default value is \code{x = NULL}.}
 
 \item{y}{A numeric, unit object, or character containing a "b"
 combined with a numeric value specifying genes plot y-location.
 The character value will
 place the genes plot y relative to the bottom of the most recently
-plotted plot according to the units of the plotgardener page. Default value is \code{y = NULL}. Options include: any numeric.}
+plotted plot according to the units of the plotgardener page. Default value is \code{y = NULL}.}
 
-\item{width}{A numeric or unit object specifying genes plot width. Default value is \code{width = NULL}. Options include: any numeric.}
+\item{width}{A numeric or unit object specifying genes plot width. Default value is \code{width = NULL}.}
 
-\item{height}{A numeric or unit object specifying genes plot height. Default value is \code{height = NULL}. Options include: any numeric.}
+\item{height}{A numeric or unit object specifying genes plot height. Default value is \code{height = NULL}.}
 
 \item{just}{A string or character vector describing the justification of genes plot relative to its (x, y) location.
 If there are two values, the first value specifies horizontal
 justification and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = c("left", "top")}. Options include: "left "top", "left "bottom", "left "center", "right "top", "right "bottom", "right "center" .}
+Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x}, \code{y}, \code{width}, or \code{height} are only given
 as numerics. Default value is \code{default.units = "inches"}. 
-Options include: "inches", "centimeters".}
+Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
 
 \item{draw}{A logical value indicating whether graphics output
 should be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
-containing relevant function parameters. Default value is \code{params = NULL}. Options include: null
+containing relevant function parameters. Default value is \code{params = NULL}.
 \end}
 }
 \value{
