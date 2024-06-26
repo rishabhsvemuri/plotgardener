@@ -27,16 +27,16 @@
 #'
 #' @param chrom A string representing the Chromosome of genome label
 #' or a character vector of chromosomes for a whole genome Manhattan plot.
-#' @param chromstart An integer start of genome label. Options include: any integer.
-#' @param chromend An integer end of genome label. Options include: any integer.
+#' @param chromstart An integer start of genome label.
+#' @param chromend An integer end of genome label.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' @param fontsize A numeric specifying text fontsize in points.
-#' Default value is \code{fontsize = 10}. Options include: any numeric.
+#' Default value is \code{fontsize = 10}.
 #' @param fontcolor A character value indicating the color for text.
-#' Default value is \code{fontcolor = "black"}. Options include: any character value.
+#' Default value is \code{fontcolor = "black"}.
 #' @param linecolor A character value indicating the color of
-#' the genome label axis. Default value is \code{linecolor = "black"}. Options include: any character value.
+#' the genome label axis. Default value is \code{linecolor = "black"}.
 #' @param margin A numeric or unit vector specifying space between axis
 #' and coordinate labels. Default value is \code{margin = unit(1, "mm")},
 #' @param scale A character value indicating the scale of the coordinates
@@ -54,7 +54,7 @@
 #' information above the label of an x-axis (only at appropriate resolutions). Default value is \code{sequence = TRUE}. Options include: TRUE, FALSE.
 #' @param boxWidth A numeric value indicating the width of the boxes
 #' representing sequence information at appropriate resolutions.
-#' Default value is \code{boxWidth = 0.5}. Options include: any numeric.
+#' Default value is \code{boxWidth = 0.5}.
 #' @param axis A character value indicating along which axis to
 #' add genome label. Sequence information will not be displayed along a y-axis.
 #' Default value is \code{axis = "x"}.
@@ -67,24 +67,24 @@
 #' }
 #' @param at A numeric vector of x-value locations for tick marks.
 #' @param tcl A numeric specifying the length of tickmarks as a
-#' fraction of text height. Default value is \code{tcl = 0.5}. Options include: any numeric.
-#' @param x A numeric or unit object specifying genome label x-location. Options include: any numeric.
+#' fraction of text height. Default value is \code{tcl = 0.5}.
+#' @param x A numeric or unit object specifying genome label x-location.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying genome label y-location.
 #' The character value will
 #' place the genome label y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page. Options include: any numeric.
+#' plotted plot according to the units of the plotgardener page.
 #' @param length A numeric or unit object specifying length of
-#' genome label axis. Options include: any numeric.
+#' genome label axis.
 #' @param just A string specifying the justification of genome label relative to its (x, y)
 #' location. If there are two values, the first value specifies horizontal
 #' justification and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"},
-#' and \code{"top"}. Default value is \code{just = c("left", "top")}.
+#' and \code{"top"}. Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
 #' @param default.units A string indicating the default units to
 #' use if \code{x}, \code{y}, or \code{length} are only given as numerics.
-#' Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters"
+#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param params An optional \link[plotgardener]{pgParams} object
 #' containing relevant function parameters.
 #' @param ... Additional grid graphical parameters or digit specifications.
