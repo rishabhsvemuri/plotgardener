@@ -35,8 +35,8 @@
 #' in BEDPE format specifying data to be plotted, or a
 #' \link[InteractionSet]{GInteractions} object.
 #' @param chrom A string specifying the chromosome of region to be plotted.
-#' @param chromstart An integer start position on chromosome to be plotted. Options include: any integer.
-#' @param chromend An integer end position on chromosome to be plotted. Options include: any integer.
+#' @param chromstart An integer start position on chromosome to be plotted.
+#' @param chromend An integer end position on chromosome to be plotted.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}.
@@ -49,10 +49,10 @@
 #' @param flip A logical value indicating whether to reflect arches over
 #' the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE.
 #' @param curvature A numeric indicating the number of points along the
-#' arch curvature. Default value is \code{curvature = 5}. Options include: any numeric.
+#' arch curvature. Default value is \code{curvature = 5}.
 #' @param archHeight A numeric value, numeric vector, or column name 
 #' in data specifying the arch heights. When NULL, all arches will be the 
-#' same height, filling up the given plot area. Options include: any numeric.
+#' same height, filling up the given plot area.
 #' @param fill A character value, a vector, or a 
 #' \link[plotgardener]{colorby} object specifying fill colors of arches.
 #' Default value is \code{fill = #1f4297"}.
@@ -65,7 +65,7 @@
 #' \item{\code{"fill"}: }{Same color as \code{fill}.}
 #' }
 #' @param alpha A numeric value specifying transparency.
-#' Default value is \code{alpha = 0.4}. Options include: any numeric.
+#' Default value is \code{alpha = 0.4}.
 #' @param bg A character value indicating background color.
 #' Default value is \code{bg = NA}.
 #' @param clip A logical value indicating whether to clip any
@@ -81,24 +81,24 @@
 #' @param baseline.color A string baseline color.
 #' Default value is \code{baseline.color = "grey"}.
 #' @param baseline.lwd A numeric baseline line width.
-#' Default value is \code{baseline.lwd = 1}. Options include: any numeric.
-#' @param x A numeric or unit object specifying pair arches plot x-location. Options include: any numeric.
+#' Default value is \code{baseline.lwd = 1}.
+#' @param x A numeric or unit object specifying pair arches plot x-location.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying BEDPE arches plot y-location.
 #' The character value will
 #' place the pair arches plot y relative to the bottom of the most
-#' recently plotted plot according to the units of the plotgardener page. Options include: any numeric.
-#' @param width A numeric or unit object specifying pair arches plot width. Options include: any numeric.
-#' @param height A numeric or unit object specifying pair arches plot height. Options include: any numeric.
+#' recently plotted plot according to the units of the plotgardener page.
+#' @param width A numeric or unit object specifying pair arches plot width.
+#' @param height A numeric or unit object specifying pair arches plot height.
 #' @param just A string specifying the justification of pair arches plot relative to its (x, y)
 #' location. If there are two values, the first value specifies horizontal
 #' justification and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = c("left", "top")}.
+#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center". 
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
+#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param draw A logical value indicating whether graphics output should be
 #' produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
