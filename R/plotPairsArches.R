@@ -59,7 +59,7 @@
 #' @param linecolor A character value, a vector, or a
 #' \link[plotgardener]{colorby} object specifying the color of the lines
 #' outlining arches. Default value is \code{linecolor = NA}.
-#' Special options are:
+#' Options include: NA, “fill”
 #' \itemize{
 #' \item{\code{NA}: }{No line color.}
 #' \item{\code{"fill"}: }{Same color as \code{fill}.}
