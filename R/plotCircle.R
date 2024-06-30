@@ -25,7 +25,7 @@
 #' @param r A numeric vector or unit object specifying radii.
 #' @param default.units A string indicating the default units to use
 #' if \code{r}, \code{x}, or \code{y} are only given as numerics or
-#' numeric vectors. Default value is \code{default.units = "inches"}.
+#' numeric vectors. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param linecolor A character value specifying circle line color.
 #' Default value is \code{linecolor = "black"}.
 #' @param lwd A numeric specifying circle line width.
@@ -34,7 +34,7 @@
 #' Default value is \code{lty = 1}.
 #' @param fill A character value specifying circle fill color.
 #' Default value is \code{fill = NA}.
-#' @param alpha Numeric value specifying color transparency.
+#' @param alpha A numeric value specifying color transparency.
 #' Default value is \code{alpha = 1}.
 #' @param params An optional \link[plotgardener]{pgParams} object
 #' containing relevant function parameters.
