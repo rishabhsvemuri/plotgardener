@@ -47,7 +47,7 @@
 #' @param sigVal A numeric specifying the significance level of p-values.
 #' Along with data p-values, this value will be converted according to the
 #' \code{trans} parameter.
-#' Default value is \code{sigVal = 5e-08}. Options include: any numeric
+#' Default value is \code{sigVal = 5e-08}.
 #' @param chrom A string specifying the chromosome of region to be plotted.
 #' If left \code{NULL}, all chromosomes found in data will be plotted.
 #' @param chromstart An integer start position on chromosome to be plotted.
@@ -63,9 +63,9 @@
 #' @param pch A numeric value or numeric vector specifying point symbols.
 #' If \link[plotgardener]{colorby} object is supplied for \code{fill},
 #' point symbols will be mapped to
-#' \code{colorby} values. Default value is \code{pch = 19}. Options include: any numeric.
+#' \code{colorby} values. Default value is \code{pch = 19}.
 #' @param cex A numeric indicating the amount by which points should be
-#' scaled relative to the default. Default value is \code{cex = 0.25}. Options include: any numeric.
+#' scaled relative to the default. Default value is \code{cex = 0.25}.
 #' @param leadSNP A list specifying the lead SNP in the desired region and
 #' any associated aesthetic features of the lead SNP data point and text label.
 #' The lead SNP should be specified as a character with the name slot
@@ -86,7 +86,7 @@
 #' and order points from max to min. Default value is \code{yscale_reverse = FALSE}. Options include: TRUE, FALSE.
 #' @param space A numeric value indicating the space between each
 #' chromosome as a fraction of the width of the plot, if plotting multiple
-#' chromosomes. Default value is \code{space = 0.01}. Options include: any numeric.
+#' chromosomes. Default value is \code{space = 0.01}.
 #' @param bg A character value indicating background color.
 #' Default value is \code{bg = NA}.
 #' @param baseline A logical value indicating whether to include a
@@ -94,26 +94,26 @@
 #' @param baseline.color String baseline color. Default value
 #' is \code{baseline.color = "grey"}.
 #' @param baseline.lwd A numeric baseline line width. Default value
-#' is \code{baseline.lwd = 1}. Options include: any numeric.
-#' @param x A numeric or unit object specifying Manhattan plot x-location. Options include: any numeric.
+#' is \code{baseline.lwd = 1}.
+#' @param x A numeric or unit object specifying Manhattan plot x-location.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying Manhattan plot y-location.
 #' The character value will
 #' place the Manhattan plot y relative to the bottom of the most
-#' recently plotted plot according to the units of the plotgardener page. Options include: any numeric.
-#' @param width A numeric or unit object specifying Manhattan plot width. Options include: any numeric.
-#' @param height A numeric or unit object specifying Manhattan plot height. Options include: any numeric.
+#' recently plotted plot according to the units of the plotgardener page.
+#' @param width A numeric or unit object specifying Manhattan plot width.
+#' @param height A numeric or unit object specifying Manhattan plot height.
 #' @param just A string specifying the justification of Manhattan plot relative to its (x, y)
 #' location. If there are two values, the first value specifies horizontal
 #' justification and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = c("left", "top")}.
+#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
 #' @param flip A logical value indicating whether to reflect Manhattan plot
 #' over the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE.
 #' @param default.units A string indicating the default units to use
 #' if \code{x}, \code{y}, \code{width}, or \code{height} are only given
-#' as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
+#' as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param draw A logical value indicating whether graphics output should
 #' be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing

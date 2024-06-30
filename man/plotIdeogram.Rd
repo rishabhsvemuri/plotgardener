@@ -49,28 +49,28 @@ stains. To change specific gieStain values (i.e. gneg, gpos, etc.) to
 specific colors, this vector can be named. This vector must have the same
 number of colors as there are gieStain values for each genome assembly.}
 
-\item{x}{A numeric or unit object specifying ideogram x-location. Options include: any numeric.}
+\item{x}{A numeric or unit object specifying ideogram x-location.}
 
 \item{y}{A numeric, unit object, or character containing a "b"
 combined with a numeric value specifying ideogram y-location.
 The character value will
 place the ideogram y relative to the bottom of the most recently
-plotted plot according to the units of the plotgardener page. Options include: any numeric.}
+plotted plot according to the units of the plotgardener page.}
 
-\item{width}{A numeric or unit object specifying ideogram width. Options include: any numeric.}
+\item{width}{A numeric or unit object specifying ideogram width.}
 
-\item{height}{A numeric or unit object specifying ideogram height. Options include: any numeric.}
+\item{height}{A numeric or unit object specifying ideogram height.}
 
 \item{just}{A string specifying the justification of ideogram relative to its (x, y) location.
 If there are two values, the first value specifies horizontal justification
 and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = c("left", "top")}.}
+Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".}
+numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
 
 \item{draw}{A logical value indicating whether graphics output should be
 produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.}
