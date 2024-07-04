@@ -32,7 +32,7 @@ Default value is \code{rot = 0}.}
 
 \item{check.overlap}{A logical value to indicate whether to check
 for and omit overlapping text.
-Default value is \code{check.overlap = FALSE}.}
+Default value is \code{check.overlap = FALSE}. Options include: TRUE, FALSE.}
 
 \item{x}{A numeric vector or unit object specifying text x-location.}
 
@@ -48,11 +48,11 @@ If there are two values, the first value specifies horizontal
 justification and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = "center"}.}
+Default value is \code{just = "center"}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x} or \code{y} are only given as numerics or numeric vectors.
-Default value is \code{default.units = "inches"}.}
+Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
 containing relevant function parameters.}

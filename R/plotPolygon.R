@@ -25,7 +25,7 @@
 #' to the units of the plotgardener page.
 #' @param default.units A string indicating the default units to use
 #' if \code{x} or \code{y} are only given as numeric vectors.
-#' Default value is \code{default.units = "inches"}.
+#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param linecolor A character value specifying polygon line color.
 #' Default value is \code{linecolor = "black"}.
 #' @param lwd A numeric specifying polygon line width.
