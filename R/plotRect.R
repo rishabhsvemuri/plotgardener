@@ -30,11 +30,11 @@
 #' and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = "center"}.
+#' Default value is \code{just = "center"}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, and \code{height} are only given as
 #' numerics or numeric vectors.
-#' Default value is \code{default.units = "inches"}.
+#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param linecolor A character value specifying rectangle line color.
 #' Default value is \code{linecolor = "black"}.
 #' @param lwd A numeric specifying rectangle line width.

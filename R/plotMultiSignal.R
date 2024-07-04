@@ -54,10 +54,10 @@
 #' @param fill A character value or vector specifying
 #' the fill color(s) of the signal tracks. Default value is \code{fill = NA}.
 #' @param ymax A numeric specifying the fraction of the max y-value
-#' to set as the height of each plot. Default value is \code{ymax = 1}. Options include: any numeric.
+#' to set as the height of each plot. Default value is \code{ymax = 1}.
 #' @param range A numeric vector of length 2 specifying the y-range
 #' of data to plot (c(min, max)) in each signal track. If \code{range = NULL},
-#' an optimal range for all signal tracks will be calculated. Options include: any numeric.
+#' an optimal range for all signal tracks will be calculated.
 #' @param scale A logical value indicating whether to include a data
 #' scale label in the top left corner of each plot.
 #' Default value is \code{scale = FALSE}. Options include: TRUE, FALSE.
@@ -73,7 +73,7 @@
 #' @param baseline.color A string baseline color.
 #' Default value is \code{baseline.color = "grey"}.
 #' @param baseline.lwd A numeric baseline line width.
-#' Default value is \code{baseline.lwd = 1}. Options include: any numeric.
+#' Default value is \code{baseline.lwd = 1}.
 #' @param orientation A string specifying signal track orientations.
 #' Default value is \code{orientation = "h"}. Options include: "v", "h".
 #' \itemize{
@@ -83,27 +83,27 @@
 #' will be stacked from top to bottom.}
 #' }
 #' @param x A numeric vector or unit object specifying the overall multisignal 
-#' x-location. Options include: any numeric.
+#' x-location.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying overall multisignal plot y-location.
 #' The character value will
 #' place the multisignal plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page. Options include: any numeric.
+#' plotted plot according to the units of the plotgardener page.
 #' @param width A numeric or unit object specifying overall multisignal plot 
-#' width. Options include: any numeric.
+#' width.
 #' @param height A numeric or unit object specifying overall multisignal plot 
-#' height. Options include: any numeric.
+#' height.
 #' @param just A string specifying the justification of overall multisignal plot relative to 
 #' its (x, y) location. If there are two values, the first value specifies 
 #' horizontal justification and the second value specifies vertical 
 #' justification. Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = c("left", "top")}.
+#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
 #' @param gapdistance A numeric or unit object 
-#' specifying space between plots. Default value is \code{gapdistance = 0.2}. Options include: any numeric.
+#' specifying space between plots. Default value is \code{gapdistance = 0.2}.
 #' @param default.units A string indicating the default units to use
 #' if \code{x} or \code{y} are only given as numerics.
-#' Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
+#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param draw A logical value indicating whether graphics output should be
 #' produced. Default value \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing

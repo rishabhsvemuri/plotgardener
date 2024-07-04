@@ -40,15 +40,15 @@ interaction counts in sparse upper triangular format.}
 basepairs of each pixel. For hic files, "auto" will attempt
 to choose a resolution based on the size of the region. For
 dataframes, "auto" will attempt to detect the resolution the
-dataframe contains. Default value \code{resolution = "auto"}. Options include: any numeric.}
+dataframe contains. Default value \code{resolution = "auto"}.}
 
 \item{zrange}{A numeric vector of length 2 specifying the range
 of interaction scores to plot, where extreme values will be set
-to the max or min. Default value \code{resolution = NULL}. Options include: any numeric.}
+to the max or min. Default value \code{resolution = NULL}.}
 
 \item{norm}{A character value specifying hic data normalization method,
 if giving .hic file. This value must be found in the .hic file.
-Default value is \code{norm = "KR"}. Options include: any character value.}
+Default value is \code{norm = "KR"}.}
 
 \item{matrix}{Character value indicating the type of matrix to output.
 Default value is \code{matrix = "observed"}. Options include: "observed", "oe", "log2oe".
@@ -97,19 +97,19 @@ Default value is \code{half = "both"}. Options include: "top", "both", "bottom".
 }}
 
 \item{bg}{A character value indicating background color.
-Default value is \code{bg = NA}. Options include: any character value.}
+Default value is \code{bg = NA}.}
 
-\item{x}{A numeric or unit object specifying square Hi-C plot x-location. Options include: any numeric.}
+\item{x}{A numeric or unit object specifying square Hi-C plot x-location.}
 
 \item{y}{A numeric, unit object, or character containing a "b" combined
 with a numeric value specifying square Hi-C plot y-location.
 The character value will
 place the square Hi-C plot y relative to the bottom of the most recently
-plotted plot according to the units of the plotgardener page. Options include: any numeric.}
+plotted plot according to the units of the plotgardener page.}
 
-\item{width}{A numeric or unit object specifying square Hi-C plot width. Options include: any numeric.}
+\item{width}{A numeric or unit object specifying square Hi-C plot width.}
 
-\item{height}{A numeric or unit object specifying square Hi-C plot height. Options include: any numeric.}
+\item{height}{A numeric or unit object specifying square Hi-C plot height.}
 
 \item{just}{The justification of square Hi-C plot relative to
 its (x, y) location. If there are two values, the first value specifies
@@ -117,11 +117,11 @@ horizontal justification and the second value specifies vertical
 justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = c("left", "top")}.}
+Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".}
+numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
 
 \item{draw}{A logical value indicating whether graphics output should be
 produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.}

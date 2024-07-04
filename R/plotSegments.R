@@ -34,7 +34,7 @@
 #' units of the plotgardener page.
 #' @param default.units A string indicating the default units to use
 #' if \code{x0}, \code{y0}, \code{x1}, or \code{y1} are only given as
-#' numeric vectors. Default value is \code{default.units = "inches"}.
+#' numeric vectors. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param linecolor A character value specifying segment line color.
 #' Default value is \code{linecolor = "black"}.
 #' @param lwd A numeric specifying segment line width.
@@ -42,14 +42,14 @@
 #' @param lty A numeric specifying segment line type.
 #' Default value is \code{lty = 1}.
 #' @param lineend A character value specifying line end style.
-#' Default value is \code{lineend = "butt"}. Options are:
+#' Default value is \code{lineend = "butt"}. Options include: "round", "butt", "square".
 #' \itemize{
 #' \item{\code{"round"}: Segment ends are rounded.}
 #' \item{\code{"butt"}: Segment ends end exactly where ended.}
 #' \item{\code{"square"}: Segment ends are squared.}
 #' }
 #' @param linejoin A character value specifying line join style.
-#' Default value is \code{linejoin = "mitre"}. Options are:
+#' Default value is \code{linejoin = "mitre"}. Options include: "round", "mitre", "bevel"
 #' \itemize{
 #' \item{\code{"round"}: }{Line joins are rounded.}
 #' \item{\code{"mitre"}: }{Line joins are sharp corners.}

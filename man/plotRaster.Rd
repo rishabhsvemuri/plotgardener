@@ -33,17 +33,17 @@ of the plotgardener page.}
 
 \item{height}{A numeric vector or unit object specifying raster heights.}
 
-\item{just}{Justification of text relative to its (x, y) location.
+\item{just}{A string specifying the justification of text relative to its (x, y) location.
 If there are two values, the first value specifies horizontal
 justification and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and
-\code{"top"}. Default value is \code{just = "center"}.}
+\code{"top"}. Default value is \code{just = "center"}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
 
 \item{default.units}{A string indicating the default units
 to use if \code{x}, \code{y}, \code{width}, or \code{height}
 are only given as numerics or numeric vectors.
-Default value is \code{default.units = "inches"}.}
+Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
 
 \item{interpolate}{A logical value indicating whether to linearly
 interpolate the image. Default value is \code{interpolate = TRUE}.}

@@ -31,13 +31,12 @@ plotLegend(
 \item{fill}{If specified, this argument will produce boxes filled with
 the specified colors to appear beside the legend text.}
 
-\item{pch}{The plotting symbols appearing in the legend, as a
-numeric vector.}
+\item{pch}{A numeric vector plotting symbols appearing in the legend.}
 
 \item{lty}{The line types for lines appearing in the legend.}
 
 \item{orientation}{A string specifying legend orientation.
-Default value is \code{orientation = "v"}. Options are:
+Default value is \code{orientation = "v"}. Options include: "v", "h".
 \itemize{
 \item{\code{"v"}: }{Vertical legend orientation.}
 \item{\code{"h"}: }{Horizontal legend orientation.}
@@ -49,10 +48,10 @@ the top of the legend.}
 \item{fontsize}{A numeric specifying text fontsize in points.
 Default value is \code{fontsize = 10}.}
 
-\item{border}{Logical value indicating whether to add a border
-around heatmap legend. Default value is \code{border = TRUE}.}
+\item{border}{A logical value indicating whether to add a border
+around heatmap legend. Default value is \code{border = TRUE}. Options include: TRUE, FALSE.}
 
-\item{bg}{Character value indicating background color.
+\item{bg}{A character value indicating background color.
 Default value is \code{bg = NA}.}
 
 \item{x}{A numeric or unit object specifying legend x-location.}
@@ -67,19 +66,19 @@ plotted plot according to the units of the plotgardener page.}
 
 \item{height}{A numeric or unit object specifying legend height.}
 
-\item{just}{Justification of legend relative to its (x, y) location.
+\item{just}{A string specifying the justification of legend relative to its (x, y) location.
 If there are two values, the first value specifies horizontal
 justification and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = c("left", "top")}.}
+Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
 
 \item{default.units}{A string indicating the default units to use
 if \code{x}, \code{y}, \code{width}, or \code{height} are only given
-as numerics. Default value is \code{default.units = "inches"}.}
+as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
 
 \item{draw}{A logical value indicating whether graphics output should
-be produced. Default value is \code{draw = TRUE}.}
+be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
 containing relevant function parameters.}

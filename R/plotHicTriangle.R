@@ -31,10 +31,10 @@
 #' each pixel. For hic files, "auto" will attempt to choose a
 #' resolution based on the size of the region. For
 #' dataframes, "auto" will attempt to detect the resolution
-#' the dataframe contains. Default value is \code{resolution = "auto"}. Options include: any numeric. 
+#' the dataframe contains. Default value is \code{resolution = "auto"}.
 #' @param zrange A numeric vector of length 2 specifying the
 #' range of interaction scores to plot, where extreme values
-#' will be set to the max or min. Default value is \code{zrange = NULL}. Options include: numeric vector of length 2.
+#' will be set to the max or min. Default value is \code{zrange = NULL}.
 #' @param norm A character value specifying hic data normalization method,
 #' if giving .hic file. This value must be found in the .hic file.
 #' Default value is \code{norm = "KR"}.
@@ -46,8 +46,8 @@
 #' \item{\code{"log2oe"}: }{Log2 transformed observed/expected counts.}
 #' }
 #' @param chrom A string representing the chromosome of region to be plotted.
-#' @param chromstart A integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Options include: any integer.
-#' @param chromend A integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Options include: any integer.
+#' @param chromstart A integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}.
+#' @param chromend A integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}.
 #' @param assembly A string representing the eefault genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}.
@@ -60,31 +60,31 @@
 #' the Hi-C matrix over the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE.
 #' @param bg A character value indicating background color.
 #' Default value is \code{bg = NA}.
-#' @param x A numeric or unit object specifying triangle Hi-C plot x-location. Options include: any numeric.
+#' @param x A numeric or unit object specifying triangle Hi-C plot x-location.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying triangle Hi-C plot y-location.
 #' The character value will
 #' place the triangle Hi-C plot y relative to the bottom of the most
-#' recently plotted plot according to the units of the plotgardener page. Options include: any numeric.
+#' recently plotted plot according to the units of the plotgardener page.
 #' @param width A numeric or unit object specifying the bottom
-#' width of the Hi-C plot triangle. Options include: any numeric.
+#' width of the Hi-C plot triangle.
 #' @param height A numeric or unit object specifying the height of
-#' the Hi-C plot triangle. Options include: any numeric.
+#' the Hi-C plot triangle.
 #' @param just A string specifying the justification of triangle Hi-C plot relative to
 #' its (x, y) location. If there are two values, the first value specifies
 #' horizontal justification and the second value specifies vertical
 #' justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = c("left", "top")}.
+#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
+#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param draw A logical value indicating whether graphics output should
 #' be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
 #' relevant function parameters.
-#' @param quiet A logical indicating whether or not to print messages. Default value is \code{quiet = FALSE}. Options include: TRUE, FALSE
+#' @param quiet A logical indicating whether or not to print messages. Default value is \code{quiet = FALSE}. Options include: TRUE, FALSE.
 #' 
 #' \end
 #'

@@ -57,9 +57,9 @@ Default value is \code{matrix = "observed"}. Options include: "observed", "oe", 
 
 \item{chrom}{A string representing the chromosome of region to be plotted.}
 
-\item{chromstart}{A integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Options include: any integer.}
+\item{chromstart}{A integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}.}
 
-\item{chromend}{A integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Options include: any integer.}
+\item{chromend}{A integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}.}
 
 \item{assembly}{A string representing the eefault genome assembly or a
 \link[plotgardener]{assembly} object.
@@ -79,19 +79,19 @@ the Hi-C matrix over the x-axis. Default value is \code{flip = FALSE}. Options i
 Default value is \code{bg = NA}.}
 
 \item{x}{A numeric or unit object specifying rectangle
-Hi-C plot x-location. Options include: any numeric.}
+Hi-C plot x-location.}
 
 \item{y}{A numeric, unit object, or character containing a "b" combined
 with a numeric value specifying rectangle Hi-C plot y-location.
 The character value will
 place the rectangle Hi-C plot y relative to the bottom of the most
-recently plotted plot according to the units of the plotgardener page. Options include: any numeric.}
+recently plotted plot according to the units of the plotgardener page.}
 
 \item{width}{A numeric or unit object specifying the width of the
-Hi-C plot rectangle. Options include: any numeric.}
+Hi-C plot rectangle.}
 
 \item{height}{A numeric or unit object specifying the height of the
-Hi-C plot rectangle. Options include: any numeric.}
+Hi-C plot rectangle.}
 
 \item{just}{A string specifying the justification of rectangle Hi-C plot relative to
 its (x, y) location. If there are two values, the first value
@@ -99,11 +99,11 @@ specifies horizontal justification and the second value specifies
 vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = c("left", "top")}.}
+Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
 
 \item{default.units}{A string indicating the default units to use
 if \code{x}, \code{y}, \code{width}, or \code{height} are only given
-as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters"}
+as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
 
 \item{draw}{A logical value indicating whether graphics output should
 be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.}

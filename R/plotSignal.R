@@ -37,7 +37,7 @@
 #' the second \code{data} will be plotted below the x-axis if positive.
 #' The second \code{data} can also be negative data.
 #' @param binSize A numeric specifying the length of each data
-#' bin in basepairs. Default value is \code{binSize = NA}. Options include: any numeric.
+#' bin in basepairs. Default value is \code{binSize = NA}.
 #' @param binCap A logical value indicating whether the function will
 #' limit the number of data bins to 8,000.
 #' Default value is \code{binCap = TRUE}. Options include: TRUE, FALSE.
@@ -55,7 +55,7 @@
 #' @param fill A character value or vector of length 2 specifying
 #' the fill color(s) of the signal track(s). Default value is \code{fill = NA}.
 #' @param ymax A numeric specifying the fraction of the max y-value
-#' to set as the height of the plot. Default value is \code{ymax = 1}. Options include: any numeric.
+#' to set as the height of the plot. Default value is \code{ymax = 1}.
 #' @param range A numeric vector of length 2 specifying the y-range
 #' of data to plot (c(min, max)).
 #' @param scale A logical value indicating whether to include a data
@@ -73,30 +73,30 @@
 #' @param baseline.color A string baseline color.
 #' Default value is \code{baseline.color = "grey"}.
 #' @param baseline.lwd A numeric baseline line width.
-#' Default value is \code{baseline.lwd = 1}. Options include: any numeric.
+#' Default value is \code{baseline.lwd = 1}.
 #' @param orientation A string specifying signal track orientation.
 #' Default value is \code{orientation = "h"}. Options include: "h", "v".
 #' \itemize{
 #' \item{\code{"v"}: }{Vertical signal track orientation.}
 #' \item{\code{"h"}: }{Horizontal signal track orientation.}
 #' }
-#' @param x A numeric or unit object specifying signal plot x-location. Options include: any numeric.
+#' @param x A numeric or unit object specifying signal plot x-location.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying signal plot y-location.
 #' The character value will
 #' place the signal plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page. Options include: any numeric.
-#' @param width A numeric or unit object specifying signal plot width. Options include: any numeric.
-#' @param height A numeric or unit object specifying signal plot height. Options include: any numeric.
+#' plotted plot according to the units of the plotgardener page.
+#' @param width A numeric or unit object specifying signal plot width.
+#' @param height A numeric or unit object specifying signal plot height.
 #' @param just A string specifying the justification of signal plot relative to its (x, y) location.
 #' If there are two values, the first value specifies horizontal justification
 #' and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = c("left", "top")}.
+#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
+#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param draw A logical value indicating whether graphics output should be
 #' produced. Default value \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
