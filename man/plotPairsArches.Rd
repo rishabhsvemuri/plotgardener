@@ -42,9 +42,9 @@ in BEDPE format specifying data to be plotted, or a
 
 \item{chrom}{A string specifying the chromosome of region to be plotted.}
 
-\item{chromstart}{An integer start position on chromosome to be plotted. Options include: any integer.}
+\item{chromstart}{An integer start position on chromosome to be plotted.}
 
-\item{chromend}{An integer end position on chromosome to be plotted. Options include: any integer.}
+\item{chromend}{An integer end position on chromosome to be plotted.}
 
 \item{assembly}{A string specifying the default genome assembly or a
 \link[plotgardener]{assembly} object.
@@ -61,11 +61,11 @@ Default value is \code{style = "2D"}. Options include: "2D", "3D".
 the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE.}
 
 \item{curvature}{A numeric indicating the number of points along the
-arch curvature. Default value is \code{curvature = 5}. Options include: any numeric.}
+arch curvature. Default value is \code{curvature = 5}.}
 
 \item{archHeight}{A numeric value, numeric vector, or column name 
 in data specifying the arch heights. When NULL, all arches will be the 
-same height, filling up the given plot area. Options include: any numeric.}
+same height, filling up the given plot area.}
 
 \item{fill}{A character value, a vector, or a 
 \link[plotgardener]{colorby} object specifying fill colors of arches.
@@ -74,14 +74,14 @@ Default value is \code{fill = #1f4297"}.}
 \item{linecolor}{A character value, a vector, or a
 \link[plotgardener]{colorby} object specifying the color of the lines
 outlining arches. Default value is \code{linecolor = NA}.
-Special options are:
+Options include: NA, “fill”
 \itemize{
 \item{\code{NA}: }{No line color.}
 \item{\code{"fill"}: }{Same color as \code{fill}.}
 }}
 
 \item{alpha}{A numeric value specifying transparency.
-Default value is \code{alpha = 0.4}. Options include: any numeric.}
+Default value is \code{alpha = 0.4}.}
 
 \item{bg}{A character value indicating background color.
 Default value is \code{bg = NA}.}
@@ -104,30 +104,30 @@ a baseline along the x-axis. Default value is \code{baseline = FALSE}. Options i
 Default value is \code{baseline.color = "grey"}.}
 
 \item{baseline.lwd}{A numeric baseline line width.
-Default value is \code{baseline.lwd = 1}. Options include: any numeric.}
+Default value is \code{baseline.lwd = 1}.}
 
-\item{x}{A numeric or unit object specifying pair arches plot x-location. Options include: any numeric.}
+\item{x}{A numeric or unit object specifying pair arches plot x-location.}
 
 \item{y}{A numeric, unit object, or character containing a "b"
 combined with a numeric value specifying BEDPE arches plot y-location.
 The character value will
 place the pair arches plot y relative to the bottom of the most
-recently plotted plot according to the units of the plotgardener page. Options include: any numeric.}
+recently plotted plot according to the units of the plotgardener page.}
 
-\item{width}{A numeric or unit object specifying pair arches plot width. Options include: any numeric.}
+\item{width}{A numeric or unit object specifying pair arches plot width.}
 
-\item{height}{A numeric or unit object specifying pair arches plot height. Options include: any numeric.}
+\item{height}{A numeric or unit object specifying pair arches plot height.}
 
 \item{just}{A string specifying the justification of pair arches plot relative to its (x, y)
 location. If there are two values, the first value specifies horizontal
 justification and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = c("left", "top")}.}
+Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".}
+numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
 
 \item{draw}{A logical value indicating whether graphics output should be
 produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.}

@@ -33,7 +33,7 @@ to the units of the plotgardener page.}
 
 \item{default.units}{A string indicating the default units to use
 if \code{r}, \code{x}, or \code{y} are only given as numerics or
-numeric vectors. Default value is \code{default.units = "inches"}.}
+numeric vectors. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
 
 \item{linecolor}{A character value specifying circle line color.
 Default value is \code{linecolor = "black"}.}
@@ -47,7 +47,7 @@ Default value is \code{lty = 1}.}
 \item{fill}{A character value specifying circle fill color.
 Default value is \code{fill = NA}.}
 
-\item{alpha}{Numeric value specifying color transparency.
+\item{alpha}{A numeric value specifying color transparency.
 Default value is \code{alpha = 1}.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
