@@ -43,7 +43,7 @@ the second \code{data} will be plotted below the x-axis if positive.
 The second \code{data} can also be negative data.}
 
 \item{binSize}{A numeric specifying the length of each data
-bin in basepairs. Default value is \code{binSize = NA}. Options include: any numeric.}
+bin in basepairs. Default value is \code{binSize = NA}.}
 
 \item{binCap}{A logical value indicating whether the function will
 limit the number of data bins to 8,000.
@@ -70,7 +70,7 @@ Default value is \code{linecolor = "#37a7db"}.}
 the fill color(s) of the signal track(s). Default value is \code{fill = NA}.}
 
 \item{ymax}{A numeric specifying the fraction of the max y-value
-to set as the height of the plot. Default value is \code{ymax = 1}. Options include: any numeric.}
+to set as the height of the plot. Default value is \code{ymax = 1}.}
 
 \item{range}{A numeric vector of length 2 specifying the y-range
 of data to plot (c(min, max)).}
@@ -95,7 +95,7 @@ baseline along the x-axis. Default value is \code{baseline = TRUE}. Options incl
 Default value is \code{baseline.color = "grey"}.}
 
 \item{baseline.lwd}{A numeric baseline line width.
-Default value is \code{baseline.lwd = 1}. Options include: any numeric.}
+Default value is \code{baseline.lwd = 1}.}
 
 \item{orientation}{A string specifying signal track orientation.
 Default value is \code{orientation = "h"}. Options include: "h", "v".
@@ -104,28 +104,28 @@ Default value is \code{orientation = "h"}. Options include: "h", "v".
 \item{\code{"h"}: }{Horizontal signal track orientation.}
 }}
 
-\item{x}{A numeric or unit object specifying signal plot x-location. Options include: any numeric.}
+\item{x}{A numeric or unit object specifying signal plot x-location.}
 
 \item{y}{A numeric, unit object, or character containing a "b"
 combined with a numeric value specifying signal plot y-location.
 The character value will
 place the signal plot y relative to the bottom of the most recently
-plotted plot according to the units of the plotgardener page. Options include: any numeric.}
+plotted plot according to the units of the plotgardener page.}
 
-\item{width}{A numeric or unit object specifying signal plot width. Options include: any numeric.}
+\item{width}{A numeric or unit object specifying signal plot width.}
 
-\item{height}{A numeric or unit object specifying signal plot height. Options include: any numeric.}
+\item{height}{A numeric or unit object specifying signal plot height.}
 
 \item{just}{A string specifying the justification of signal plot relative to its (x, y) location.
 If there are two values, the first value specifies horizontal justification
 and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = c("left", "top")}.}
+Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".}
+numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
 
 \item{draw}{A logical value indicating whether graphics output should be
 produced. Default value \code{draw = TRUE}. Options include: TRUE, FALSE.}
