@@ -17,8 +17,8 @@
 #' Default value is \code{height = 11}.
 #' @param default.units A string indicating the default units to use if
 #' \code{width} or \code{height} are only given as numerics.
-#' Default value is \code{default.units = "inches"}.
-#' @param bg Character value indicating page background color.
+#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
+#' @param bg A character value indicating page background color.
 #' Default value is \code{bg = NA}.
 #' @param xgrid A numeric indicating the increment by which to place
 #' vertical gridlines. Default value is \code{xgrid = 0.5}.
@@ -26,7 +26,7 @@
 #' horizontal gridlines. Default value is \code{ygrid = 0.5}.
 #' @param showGuides A logical value indicating whether to draw a
 #' black border around the entire page and guiding rulers along the top and
-#' left side of the page. Default value is \code{showOutline = TRUE}.
+#' left side of the page. Default value is \code{showOutline = TRUE}. Options include: TRUE, FALSE
 #' @param params An optional \link[plotgardener]{pgParams} object
 #' containing relevant function parameters.
 #'
