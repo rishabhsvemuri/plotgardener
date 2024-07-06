@@ -50,10 +50,10 @@
 #' Default value is \code{boxHeight = unit(2, "mm")}.
 #' @param spaceWidth A numeric value specifying the width of minimum spacing
 #' between transcripts, as a fraction of the plot's genomic range.
-#' Default value is \code{spaceWidth = 0.02}. Options include: any numeric.
+#' Default value is \code{spaceWidth = 0.02}.
 #' @param spaceHeight A numeric value specifying the height of spacing
 #' between transcripts on different rows, as a fraction of \code{boxHeight}.
-#' Default value is \code{spaceHeight = 0.3}. Options include: any numeric.
+#' Default value is \code{spaceHeight = 0.3}.
 #' @param limitLabel A logical value indicating whether to draw a "+"
 #' when not all elements can be plotted in the plotting space. Default 
 #' value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE.
@@ -62,7 +62,7 @@
 #' names as strings to highlight and a column named "color" containing 
 #' corresponding highlight colors.
 #' @param fontsize A numeric specifying text fontsize in points.
-#' Default value is \code{fontsize = 8}. Options include: any numeric.
+#' Default value is \code{fontsize = 8}.
 #' @param labels A character value describing the format of
 #' transcript text labels. Default value is \code{labels = "trancript"}.
 #' Options include: NULL, "transcript", "gene", "both".
@@ -74,27 +74,27 @@
 #' the format "gene name:transcript name".}
 #' }
 #' @param stroke A numeric value indicating the stroke width for
-#' transcript body outlines. Default value is \code{stroke = 0.1}. Options include: any numeric.
+#' transcript body outlines. Default value is \code{stroke = 0.1}.
 #' @param bg A character value indicating background color.
 #' Default value is \code{bg = NA}.
-#' @param x A numeric or unit object specifying transcript plot x-location. Options include: any numeric.
+#' @param x A numeric or unit object specifying transcript plot x-location.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying transcript plot y-location.
 #' The character value will
 #' place the transcript plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page. Options include: any numeric.
-#' @param width A numeric or unit object specifying transcript plot width. Options include: any numeric.
-#' @param height A numeric or unit object specifying transcript plot height. Options include: any numeric.
+#' plotted plot according to the units of the plotgardener page.
+#' @param width A numeric or unit object specifying transcript plot width.
+#' @param height A numeric or unit object specifying transcript plot height.
 #' @param just A string specifying the justification of transcript plot relative to
 #' its (x, y) location. If there are two values, the first value specifies
 #' horizontal justification and the second value specifies vertical
 #' justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = c("left", "top")}.
+#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "centimeters".
+#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
 #' @param draw A logical value indicating whether graphics output should be
 #' produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object containing

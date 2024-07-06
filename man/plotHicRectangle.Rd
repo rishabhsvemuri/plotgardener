@@ -37,7 +37,7 @@ interaction counts in sparse upper triangular format.}
 of each pixel. For hic files, "auto" will attempt to choose a
 resolution based on the size of the region. For
 dataframes, "auto" will attempt to detect the resolution the
-dataframe contains. Default value is \code{resolution = "auto"}. Options include: any numeric.}
+dataframe contains. Default value is \code{resolution = "auto"}.}
 
 \item{zrange}{A numeric vector of length 2 specifying the range of
 interaction scores to plot, where extreme values will be set to the
