@@ -27,9 +27,11 @@ plotGenes(
     draw = TRUE,
     params = NULL
 )
+
+Data
 }
 \arguments{
-\item{chrom}{A string representing the chromosome region to be plotted. Default value is \code{chrom = NULL}.}
+\item{chrom}{A string representing the chromosome region to be plotted.}
 
 \item{chromstart}{An int start position on chromosome to be plotted. Default value is \code{chromstart = NULL}.}
 
@@ -37,7 +39,9 @@ plotGenes(
 
 \item{assembly}{A string represnting the default genome assembly as a string or a
 \link[plotgardener]{assembly} object.
-Default value is \code{assembly = "hg38"}.}
+Default value is \code{assembly = "hg38"}.
+
+Aesthetic}
 
 \item{fontsize}{A numeric specifying text fontsize in points.
 Default value is \code{fontsize = 8}.}
@@ -70,7 +74,9 @@ containing corresponding highlight colors. Default value is \code{geneHighlights
 body outlines. Default value is \code{stroke = 0.1}.}
 
 \item{bg}{A string indicating background color.
-Default value is \code{bg = NA}.}
+Default value is \code{bg = NA}.
+
+Positional}
 
 \item{x}{A numeric or unit object specifying genes plot x-location. Default value is \code{x = NULL}.}
 
@@ -101,6 +107,7 @@ should be produced. Default value is \code{draw = TRUE}. Options include: TRUE, 
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
 containing relevant function parameters. Default value is \code{params = NULL}.
+
 \end}
 }
 \value{

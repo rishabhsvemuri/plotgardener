@@ -24,12 +24,15 @@
 #'     params = NULL
 #' )
 #'
-#' @param chrom A string representing the chromosome region to be plotted. Default value is \code{chrom = NULL}.
+#' Data
+#' @param chrom A string representing the chromosome region to be plotted.
 #' @param chromstart An int start position on chromosome to be plotted. Default value is \code{chromstart = NULL}.
 #' @param chromend An int end position on chromosome to be plotted. Default value is \code{chromend = NULL}.
 #' @param assembly A string represnting the default genome assembly as a string or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}.
+#' 
+#' Aesthetic
 #' @param fontsize A numeric specifying text fontsize in points.
 #' Default value is \code{fontsize = 8}.
 #' @param fontcolor A string or vector of length 2 indicating
@@ -54,6 +57,8 @@
 #' body outlines. Default value is \code{stroke = 0.1}.
 #' @param bg A string indicating background color.
 #' Default value is \code{bg = NA}.
+#' 
+#' Positional
 #' @param x A numeric or unit object specifying genes plot x-location. Default value is \code{x = NULL}.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying genes plot y-location.
@@ -76,7 +81,7 @@
 #' should be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
 #' @param params An optional \link[plotgardener]{pgParams} object
 #' containing relevant function parameters. Default value is \code{params = NULL}.
-#' \end
+#' 
 #' @return Returns a \code{genes} object containing
 #' relevant genomic region, placement, and \link[grid]{grob} information.
 #'
