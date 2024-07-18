@@ -35,76 +35,74 @@
 #' \link[GenomicRanges]{GRanges} object with metadata column \code{score}.
 #' Either one \code{data} argument or a list of two can be provided, where
 #' the second \code{data} will be plotted below the x-axis if positive.
-#' The second \code{data} can also be negative data.
+#' The second \code{data} can also be negative data. Class: Data.
 #' @param binSize A numeric specifying the length of each data
-#' bin in basepairs. Default value is \code{binSize = NA}.
+#' bin in basepairs. Default value is \code{binSize = NA}. Class: Data.
 #' @param binCap A logical value indicating whether the function will
 #' limit the number of data bins to 8,000.
-#' Default value is \code{binCap = TRUE}. Options include: TRUE, FALSE.
+#' Default value is \code{binCap = TRUE}. Options include: TRUE, FALSE. Class: Data.
 #' @param negData A logical value indicating whether the provided data has 
-#' negative scores. Default value is \code{negData = FALSE}. Options include: TRUE, FALSE.
-#' @param chrom A string specifying the chromosome of region to be plotted.
-#' @param chromstart An integer start position on chromosome to be plotted.
-#' @param chromend An integer end position on chromosome to be plotted.
+#' negative scores. Default value is \code{negData = FALSE}. Options include: TRUE, FALSE. Class: Data.
+#' @param chrom A string specifying the chromosome of region to be plotted. Class: Data.
+#' @param chromstart An integer start position on chromosome to be plotted. Class: Data.
+#' @param chromend An integer end position on chromosome to be plotted. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
-#' Default value is \code{assembly = "hg38"}.
+#' Default value is \code{assembly = "hg38"}. Class: Data.
 #' @param linecolor A character value or vector of length 2 specifying the
 #' line color(s) outlining the signal track(s).
-#' Default value is \code{linecolor = "#37a7db"}.
+#' Default value is \code{linecolor = "#37a7db"}. Class: Aesthetic.
 #' @param fill A character value or vector of length 2 specifying
-#' the fill color(s) of the signal track(s). Default value is \code{fill = NA}.
+#' the fill color(s) of the signal track(s). Default value is \code{fill = NA}. Class: Aesthetic.
 #' @param ymax A numeric specifying the fraction of the max y-value
-#' to set as the height of the plot. Default value is \code{ymax = 1}.
+#' to set as the height of the plot. Default value is \code{ymax = 1}. Class: Aesthetic.
 #' @param range A numeric vector of length 2 specifying the y-range
-#' of data to plot (c(min, max)).
+#' of data to plot (c(min, max)). Class: Aesthetic.
 #' @param scale A logical value indicating whether to include a data
-#' scale label in the top left corner of the plot.
+#' scale label in the top left corner of the plot. Class: Aesthetic.
 #' Default value is \code{scale = FALSE}. Options include: TRUE, FALSE.
 #' @param label An optional character value to conveniently add a text label
 #' to the plot. If \code{scale = TRUE}, the label will be draw in the top right
 #' of the plot. Otherwise, the label will be drawn in the top left of the plot.
 #' For more customizable labels, use \link[plotgardener]{plotText}.
-#' Default value is \code{label = NULL}. 
+#' Default value is \code{label = NULL}. Class: Aesthetic.
 #' @param bg A character value indicating background color.
-#' Default value is \code{bg = NA}.
+#' Default value is \code{bg = NA}. Class: Aesthetic.
 #' @param baseline A logical value indicating whether to include a
-#' baseline along the x-axis. Default value is \code{baseline = TRUE}. Options include: TRUE, FALSE.
+#' baseline along the x-axis. Default value is \code{baseline = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param baseline.color A string baseline color.
-#' Default value is \code{baseline.color = "grey"}.
+#' Default value is \code{baseline.color = "grey"}. Class: Aesthetic.
 #' @param baseline.lwd A numeric baseline line width.
-#' Default value is \code{baseline.lwd = 1}.
+#' Default value is \code{baseline.lwd = 1}. Class: Aesthetic.
 #' @param orientation A string specifying signal track orientation.
-#' Default value is \code{orientation = "h"}. Options include: "h", "v".
+#' Default value is \code{orientation = "h"}. Options include: "h", "v". Class: Aesthetic.
 #' \itemize{
 #' \item{\code{"v"}: }{Vertical signal track orientation.}
 #' \item{\code{"h"}: }{Horizontal signal track orientation.}
 #' }
-#' @param x A numeric or unit object specifying signal plot x-location.
+#' @param x A numeric or unit object specifying signal plot x-location. Class: Positional.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying signal plot y-location.
 #' The character value will
 #' place the signal plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying signal plot width.
-#' @param height A numeric or unit object specifying signal plot height.
+#' plotted plot according to the units of the plotgardener page. Class: Positional.
+#' @param width A numeric or unit object specifying signal plot width. Class: Positional.
+#' @param height A numeric or unit object specifying signal plot height. Class: Positional.
 #' @param just A string specifying the justification of signal plot relative to its (x, y) location.
 #' If there are two values, the first value specifies horizontal justification
 #' and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
+#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center". Class: Positional.
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
+#' numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.
 #' @param draw A logical value indicating whether graphics output should be
-#' produced. Default value \code{draw = TRUE}. Options include: TRUE, FALSE.
+#' produced. Default value \code{draw = TRUE}. Options include: TRUE, FALSE. Class: Positional.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
-#' relevant function parameters.
-#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#' relevant function parameters. Class: Positional.
+#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.
 #' 
-#' \end
-#'
 #' @return Returns a \code{signal} object containing relevant
 #' genomic region, placement, and \link[grid]{grob} information.
 #'

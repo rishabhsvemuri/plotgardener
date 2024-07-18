@@ -29,70 +29,68 @@
 #'
 #' @param data A string specifying the BEDPE file path, a dataframe
 #' in BEDPE format specifying data to be plotted, or a
-#' \link[InteractionSet]{GInteractions} object.
-#' @param chrom A string representing the chromosome of region to be plotted.
-#' @param chromstart An integer start position on chromosome to be plotted.
-#' @param chromend An integer end position on chromosome to be plotted.
+#' \link[InteractionSet]{GInteractions} object. Class: Data.
+#' @param chrom A string representing the chromosome of region to be plotted. Class: Data.
+#' @param chromstart An integer start position on chromosome to be plotted. Class: Data.
+#' @param chromend An integer end position on chromosome to be plotted. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
-#' Default value is \code{assembly = "hg38"}.
+#' Default value is \code{assembly = "hg38"}. Class: Data.
 #' @param fill A character value, a vector, or 
 #' a \link[plotgardener]{colorby} object specifying fill colors of
-#' paired range elements. Default value is \code{fill = "#1f4297"}.
+#' paired range elements. Default value is \code{fill = "#1f4297"}. Class: Aesthetic.
 #' @param linecolor A  character value, a vector, or a
 #' \link[plotgardener]{colorby} object specifying the color of the lines
-#' outlining paired range elements. Default value is \code{linecolor = NA}.
+#' outlining paired range elements. Default value is \code{linecolor = NA}. Class: Aesthetic.
 #' Options include: NA, "fill".
 #' \itemize{
 #' \item{\code{NA}: }{No line color.}
 #' \item{\code{"fill"}: }{Same color as \code{fill}.}
 #' }
 #' @param bg A character value indicating background color.
-#' Default value is \code{bg = NA}.
+#' Default value is \code{bg = NA}. Class: Aesthetic.
 #' @param boxHeight A numeric or unit object specifying height of boxes
 #' at either end of paired range elements.
-#' Default value is \code{boxHeight = unit(2, "mm")}.
+#' Default value is \code{boxHeight = unit(2, "mm")}. Class: Aesthetic.
 #' @param spaceWidth A numeric specifying the width of spacing between
 #' paired range elements, as a fraction of the plot's genomic range.
-#' Default value is \code{spaceWidth = 0.02}.
+#' Default value is \code{spaceWidth = 0.02}. Class: Aesthetic.
 #' @param spaceHeight A numeric specifying the height of space between
 #' boxes of paired range elements on different rows.
-#' Default value is \code{spaceHeight = 0.3}.
+#' Default value is \code{spaceHeight = 0.3}. Class: Aesthetic.
 #' @param limitLabel A logical value indicating whether to draw a "+"
 #' when not all elements can be plotted in the plotting space. Default 
-#' value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE.
+#' value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param baseline A logical value indicating whether to include a baseline
-#' along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE.
+#' along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param baseline.color A string specifying the baseline color.
-#' Default value is \code{baseline.color = "grey"}.
+#' Default value is \code{baseline.color = "grey"}. Class: Aesthetic.
 #' @param baseline.lwd A numeric specifying the baseline line width.
-#' Default value is \code{baseline.lwd = 1}.
-#' @param x A numeric or unit object specifying paired range plot x-location.
+#' Default value is \code{baseline.lwd = 1}. Class: Aesthetic.
+#' @param x A numeric or unit object specifying paired range plot x-location. Class: Positional.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying paired range plot y-location.
 #' The character value will
 #' place the paired range plot y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying paired range plot width.
-#' @param height A numeric or unit object specifying paired range plot height.
+#' plotted plot according to the units of the plotgardener page. Class: Positional.
+#' @param width A numeric or unit object specifying paired range plot width. Class: Positional.
+#' @param height A numeric or unit object specifying paired range plot height. Class: Positional.
 #' @param just A string specifying the hustification of paired range plot relative
-#' to its (x, y) location. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
+#' to its (x, y) location.
 #' If there are two values, the first value specifies horizontal
 #' justification and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = c("left", "top")}.
+#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center". Class: Positional.
 #' @param default.units A string indicating the default units to use
 #' if \code{x}, \code{y}, \code{width}, or \code{height} are only given
-#' as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
+#' as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.
 #' @param draw A logical value indicating whether graphics
-#' output should be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
+#' output should be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE. Class: Positional.
 #' @param params An optional \link[plotgardener]{pgParams} object
-#' containing relevant function parameters.
-#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#' containing relevant function parameters. Class: Positional.
+#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.
 #' 
-#' \end
-#'
 #' @return Returns a \code{pairs} object containing relevant
 #' genomic region, placement, and \link[grid]{grob} information.
 #'

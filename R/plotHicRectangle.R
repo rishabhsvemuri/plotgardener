@@ -26,68 +26,66 @@
 #' )
 #'
 #' @param data A string path to .hic file as a string or a 3-column dataframe of
-#' interaction counts in sparse upper triangular format.
+#' interaction counts in sparse upper triangular format. Class: Data.
 #' @param resolution A numeric specifying the width in basepairs
 #' of each pixel. For hic files, "auto" will attempt to choose a
 #' resolution based on the size of the region. For
 #' dataframes, "auto" will attempt to detect the resolution the
-#' dataframe contains. Default value is \code{resolution = "auto"}.
+#' dataframe contains. Default value is \code{resolution = "auto"}. Class: Data.
 #' @param zrange A numeric vector of length 2 specifying the range of
 #' interaction scores to plot, where extreme values will be set to the
-#' max or min. Default value is \code{zrange = NULL}.
+#' max or min. Default value is \code{zrange = NULL}. Class: Data.
 #' @param norm A character value specifying hic data normalization method,
 #' if giving .hic file. This value must be found in the .hic file.
-#' Default value is \code{norm = "KR"}.
+#' Default value is \code{norm = "KR"}. Class: Data.
 #' @param matrix A character value indicating the type of matrix to output.
-#' Default value is \code{matrix = "observed"}. Options include: "observed", "oe", "log2oe".
+#' Default value is \code{matrix = "observed"}. Options include: "observed", "oe", "log2oe". Class: Data.
 #' \itemize{
 #' \item{\code{"observed"}: }{Observed counts.}
 #' \item{\code{"oe"}: }{Observed/expected counts.}
 #' \item{\code{"log2oe"}: }{Log2 transformed observed/expected counts.}
 #' }
-#' @param chrom A string representing the chromosome of region to be plotted.
-#' @param chromstart A integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}.
-#' @param chromend A integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}.
+#' @param chrom A string representing the chromosome of region to be plotted. Class: Data.
+#' @param chromstart A integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.
+#' @param chromend A integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.
 #' @param assembly A string representing the eefault genome assembly or a
 #' \link[plotgardener]{assembly} object.
-#' Default value is \code{assembly = "hg38"}.
+#' Default value is \code{assembly = "hg38"}. Class: Data.
 #' @param palette A function describing the color palette to use for
 #' representing scale of interaction scores. Default value is
-#' \code{palette =  colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}.
-#' @param colorTrans A string specifying how to scale Hi-C colors.
-#' Default value is \code{colorTrans = "linear"}. Options include: "linear", "log", "log2", "log10".
+#' \code{palette =  colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}. Class: Aesthetic.
+#' @param colorTrans A string specifying how to scale Hi-C colors. Class: Aesthetic.
+#' Default value is \code{colorTrans = "linear"}. Options include: "linear", "log", "log2", "log10". Class: Aesthetic.
 #' @param flip A logical indicating whether to flip the orientation of
-#' the Hi-C matrix over the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE.
+#' the Hi-C matrix over the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param bg A character value indicating background color.
-#' Default value is \code{bg = NA}.
+#' Default value is \code{bg = NA}. Class: Aesthetic.
 #' @param x A numeric or unit object specifying rectangle
-#' Hi-C plot x-location.
+#' Hi-C plot x-location. Class: Positional.
 #' @param y A numeric, unit object, or character containing a "b" combined
 #' with a numeric value specifying rectangle Hi-C plot y-location.
 #' The character value will
 #' place the rectangle Hi-C plot y relative to the bottom of the most
-#' recently plotted plot according to the units of the plotgardener page.
+#' recently plotted plot according to the units of the plotgardener page. Class: Positional.
 #' @param width A numeric or unit object specifying the width of the
-#' Hi-C plot rectangle.
+#' Hi-C plot rectangle. Class: Positional.
 #' @param height A numeric or unit object specifying the height of the
-#' Hi-C plot rectangle.
+#' Hi-C plot rectangle. Class: Positional.
 #' @param just A string specifying the justification of rectangle Hi-C plot relative to
 #' its (x, y) location. If there are two values, the first value
 #' specifies horizontal justification and the second value specifies
 #' vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
+#' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center". Class: Positional.
 #' @param default.units A string indicating the default units to use
 #' if \code{x}, \code{y}, \code{width}, or \code{height} are only given
-#' as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
+#' as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.
 #' @param draw A logical value indicating whether graphics output should
-#' be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
+#' be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE. Class: Positional.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
-#' relevant function parameters.
-#' @param quiet A logical indicating whether or not to print messages. Default value is \code{quiet = FALSE}. Options include: TRUE, FALSE.
-#' 
-#' \end
+#' relevant function parameters. Class: Positional.
+#' @param quiet A logical indicating whether or not to print messages. Default value is \code{quiet = FALSE}. Options include: TRUE, FALSE. Class: Positional.
 #'
 #' @return Returns a \code{hicRectangle} object containing
 #' relevant genomic region, Hi-C data, placement,

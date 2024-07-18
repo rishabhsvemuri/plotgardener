@@ -26,21 +26,21 @@
 #' )
 #'
 #' @param chrom A string representing the Chromosome of genome label
-#' or a character vector of chromosomes for a whole genome Manhattan plot.
-#' @param chromstart An integer start of genome label.
-#' @param chromend An integer end of genome label.
+#' or a character vector of chromosomes for a whole genome Manhattan plot. Class: Data.
+#' @param chromstart An integer start of genome label. Class: Data.
+#' @param chromend An integer end of genome label. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
-#' \link[plotgardener]{assembly} object.
+#' \link[plotgardener]{assembly} object. Class: Data.
 #' @param fontsize A numeric specifying text fontsize in points.
-#' Default value is \code{fontsize = 10}.
+#' Default value is \code{fontsize = 10}. Class: Aesthetic.
 #' @param fontcolor A character value indicating the color for text.
-#' Default value is \code{fontcolor = "black"}.
+#' Default value is \code{fontcolor = "black"}. Class: Aesthetic.
 #' @param linecolor A character value indicating the color of
-#' the genome label axis. Default value is \code{linecolor = "black"}.
+#' the genome label axis. Default value is \code{linecolor = "black"}. Class: Aesthetic.
 #' @param margin A numeric or unit vector specifying space between axis
-#' and coordinate labels. Default value is \code{margin = unit(1, "mm")},
+#' and coordinate labels. Default value is \code{margin = unit(1, "mm")}. Class: Aesthetic.
 #' @param scale A character value indicating the scale of the coordinates
-#' along the genome label. Default value is \code{scale = "bp"}. Options include: "bp", "Kb", "Mb".
+#' along the genome label. Default value is \code{scale = "bp"}. Options include: "bp", "Kb", "Mb". Class: Aesthetic.
 #' \itemize{
 #' \item{\code{"bp"}: }{base pairs.}
 #' \item{\code{"Kb"}: }{kilobase pairs. 1 kilobase pair is equal to
@@ -49,49 +49,47 @@
 #' 1000000 base pairs.}
 #' }
 #' @param commas A logical value indicating whether to include commas in
-#' start and stop labels. Default value is \code{commas = TRUE}. Options include: TRUE, FALSE.
+#' start and stop labels. Default value is \code{commas = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param sequence A logical value indicating whether to include sequence
-#' information above the label of an x-axis (only at appropriate resolutions). Default value is \code{sequence = TRUE}. Options include: TRUE, FALSE.
+#' information above the label of an x-axis (only at appropriate resolutions). Default value is \code{sequence = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param boxWidth A numeric value indicating the width of the boxes
 #' representing sequence information at appropriate resolutions.
-#' Default value is \code{boxWidth = 0.5}.
+#' Default value is \code{boxWidth = 0.5}. Class: Aesthetic.
 #' @param axis A character value indicating along which axis to
 #' add genome label. Sequence information will not be displayed along a y-axis.
 #' Default value is \code{axis = "x"}.
-#' Options include: "x", "y".
+#' Options include: "x", "y". Class: Aesthetic.
 #' \itemize{
 #' \item{\code{"x"}: }{Genome label will be plotted along the x-axis.}
 #' \item{\code{"y"}: }{Genome label will be plotted along the y-axis.
 #' This is typically used for a square Hi-C plot made with
 #' \code{plotHicSquare}.}
 #' }
-#' @param at A numeric vector of x-value locations for tick marks.
+#' @param at A numeric vector of x-value locations for tick marks. Class: Positional.
 #' @param tcl A numeric specifying the length of tickmarks as a
-#' fraction of text height. Default value is \code{tcl = 0.5}.
-#' @param x A numeric or unit object specifying genome label x-location.
+#' fraction of text height. Default value is \code{tcl = 0.5}. Class: Positional.
+#' @param x A numeric or unit object specifying genome label x-location. Class: Positional.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying genome label y-location.
 #' The character value will
 #' place the genome label y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
+#' plotted plot according to the units of the plotgardener page. Class: Positional.
 #' @param length A numeric or unit object specifying length of
-#' genome label axis.
+#' genome label axis. Class: Positional.
 #' @param just A string specifying the justification of genome label relative to its (x, y)
 #' location. If there are two values, the first value specifies horizontal
 #' justification and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"},
-#' and \code{"top"}. Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
+#' and \code{"top"}. Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center". Class: Positional.
 #' @param default.units A string indicating the default units to
 #' use if \code{x}, \code{y}, or \code{length} are only given as numerics.
-#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
+#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.
 #' @param params An optional \link[plotgardener]{pgParams} object
-#' containing relevant function parameters.
+#' containing relevant function parameters. Class: Positional.
 #' @param ... Additional grid graphical parameters or digit specifications.
-#' See \link[grid]{gpar} and \link[base]{formatC}.
+#' See \link[grid]{gpar} and \link[base]{formatC}. Class: Positional.
 #' 
-#' \end
-#'
 #' @return Returns a \code{genomeLabel} object containing
 #' relevant genomic region, placement, and \link[grid]{grob} information.
 #'
