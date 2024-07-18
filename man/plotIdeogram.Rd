@@ -22,19 +22,19 @@ plotIdeogram(
 )
 }
 \arguments{
-\item{chrom}{A string specifying the chromosome to be plotted.}
+\item{chrom}{A string specifying the chromosome to be plotted. Class: Data.}
 
 \item{assembly}{A string specifying the default genome assembly or a
 \link[plotgardener]{assembly} object.
-Default value is \code{assembly = "hg38"}.}
+Default value is \code{assembly = "hg38"}. Class: Data.}
 
 \item{data}{Custom cytoband data, as a dataframe with the following
 columns: "seqnames", "start", "end", "width", "strand", 
-"name", "gieStain".}
+"name", "gieStain". Class: Data.}
 
 \item{orientation}{Character value indicating the orientation
 of the ideogram. Default value is \code{orientation = "h"}.
-Options include: "v", "h".
+Options include: "v", "h". Class: Aesthetic.
 \itemize{
 \item{\code{"v"}: }{Vertical ideogram orientation.}
 \item{\code{"h"}: }{Horizontal ideogram orientation.}
@@ -42,41 +42,41 @@ Options include: "v", "h".
 
 \item{showBands}{A logical value indicating whether to draw
 colored cytobands within ideogram.
-Default value is \code{showBands = TRUE}. Options include: TRUE, FALSE.}
+Default value is \code{showBands = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.}
 
 \item{fill}{(optional) A vector specifying alternate colors for cytoband
 stains. To change specific gieStain values (i.e. gneg, gpos, etc.) to 
 specific colors, this vector can be named. This vector must have the same
-number of colors as there are gieStain values for each genome assembly.}
+number of colors as there are gieStain values for each genome assembly. Class: Aesthetic.}
 
-\item{x}{A numeric or unit object specifying ideogram x-location.}
+\item{x}{A numeric or unit object specifying ideogram x-location. Class: Positional.}
 
 \item{y}{A numeric, unit object, or character containing a "b"
 combined with a numeric value specifying ideogram y-location.
 The character value will
 place the ideogram y relative to the bottom of the most recently
-plotted plot according to the units of the plotgardener page.}
+plotted plot according to the units of the plotgardener page. Class: Positional.}
 
-\item{width}{A numeric or unit object specifying ideogram width.}
+\item{width}{A numeric or unit object specifying ideogram width. Class: Positional.}
 
-\item{height}{A numeric or unit object specifying ideogram height.}
+\item{height}{A numeric or unit object specifying ideogram height. Class: Positional.}
 
 \item{just}{A string specifying the justification of ideogram relative to its (x, y) location.
 If there are two values, the first value specifies horizontal justification
 and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
+Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center". Class: Positional.}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
+numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.}
 
 \item{draw}{A logical value indicating whether graphics output should be
-produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.}
+produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE. Class: Positional.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object containing
-relevant function parameters.
+relevant function parameters. Class: Positional.
 
 \end}
 }

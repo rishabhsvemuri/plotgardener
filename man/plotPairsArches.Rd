@@ -38,106 +38,104 @@ plotPairsArches(
 \arguments{
 \item{data}{A string specifying the BEDPE file path, a dataframe
 in BEDPE format specifying data to be plotted, or a
-\link[InteractionSet]{GInteractions} object.}
+\link[InteractionSet]{GInteractions} object. Class: Data.}
 
-\item{chrom}{A string specifying the chromosome of region to be plotted.}
+\item{chrom}{A string specifying the chromosome of region to be plotted. Class: Data.}
 
-\item{chromstart}{An integer start position on chromosome to be plotted.}
+\item{chromstart}{An integer start position on chromosome to be plotted. Class: Data.}
 
-\item{chromend}{An integer end position on chromosome to be plotted.}
+\item{chromend}{An integer end position on chromosome to be plotted. Class: Data.}
 
 \item{assembly}{A string specifying the default genome assembly or a
 \link[plotgardener]{assembly} object.
-Default value is \code{assembly = "hg38"}.}
+Default value is \code{assembly = "hg38"}. Class: Data.}
 
 \item{style}{A character value describing the style of arches.
-Default value is \code{style = "2D"}. Options include: "2D", "3D".
+Default value is \code{style = "2D"}. Options include: "2D", "3D". Class: Aesthetic.
 \itemize{
 \item{\code{"2D"}: }{Arches will be drawn in a 2-dimensional style.}
 \item{\code{"3D"}: }{Arches will be drawn in a 3-dimensional style.}
 }}
 
 \item{flip}{A logical value indicating whether to reflect arches over
-the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE.}
+the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.}
 
 \item{curvature}{A numeric indicating the number of points along the
-arch curvature. Default value is \code{curvature = 5}.}
+arch curvature. Default value is \code{curvature = 5}. Class: Aesthetic.}
 
 \item{archHeight}{A numeric value, numeric vector, or column name 
 in data specifying the arch heights. When NULL, all arches will be the 
-same height, filling up the given plot area.}
+same height, filling up the given plot area. Class: Aesthetic.}
 
 \item{fill}{A character value, a vector, or a 
 \link[plotgardener]{colorby} object specifying fill colors of arches.
-Default value is \code{fill = #1f4297"}.}
+Default value is \code{fill = #1f4297"}. Class: Aesthetic.}
 
 \item{linecolor}{A character value, a vector, or a
 \link[plotgardener]{colorby} object specifying the color of the lines
 outlining arches. Default value is \code{linecolor = NA}.
-Options include: NA, “fill”
+Options include: NA, “fill”. Class: Aesthetic.
 \itemize{
 \item{\code{NA}: }{No line color.}
 \item{\code{"fill"}: }{Same color as \code{fill}.}
 }}
 
 \item{alpha}{A numeric value specifying transparency.
-Default value is \code{alpha = 0.4}.}
+Default value is \code{alpha = 0.4}. Class: Aesthetic.}
 
 \item{bg}{A character value indicating background color.
-Default value is \code{bg = NA}.}
+Default value is \code{bg = NA}. Class: Aesthetic.}
 
 \item{clip}{A logical value indicating whether to clip any
 arches that get cutoff in the given genomic region.
-Default value is \code{clip = FALSE}. Options include: TRUE, FALSE.}
+Default value is \code{clip = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.}
 
 \item{clip.noAnchor}{A logical value indicating whether to clip
 any arches that overlap the given genomic region but do not 
-have an anchor in that region. Default value is \code{clip.noAnchor = TRUE}. Options include: TRUE, FALSE.}
+have an anchor in that region. Default value is \code{clip.noAnchor = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.}
 
 \item{range}{A numeric vector of length 2 specifying the y-range
-of \code{archHeight} to plot (c(min, max)).}
+of \code{archHeight} to plot (c(min, max)). Class: Aesthetic.}
 
 \item{baseline}{A logical value indicating whether to include
-a baseline along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE.}
+a baseline along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.}
 
 \item{baseline.color}{A string baseline color.
-Default value is \code{baseline.color = "grey"}.}
+Default value is \code{baseline.color = "grey"}. Class: Aesthetic.}
 
 \item{baseline.lwd}{A numeric baseline line width.
-Default value is \code{baseline.lwd = 1}.}
+Default value is \code{baseline.lwd = 1}. Class: Aesthetic.}
 
-\item{x}{A numeric or unit object specifying pair arches plot x-location.}
+\item{x}{A numeric or unit object specifying pair arches plot x-location. Class: Positional.}
 
 \item{y}{A numeric, unit object, or character containing a "b"
 combined with a numeric value specifying BEDPE arches plot y-location.
 The character value will
 place the pair arches plot y relative to the bottom of the most
-recently plotted plot according to the units of the plotgardener page.}
+recently plotted plot according to the units of the plotgardener page. Class: Positional.}
 
-\item{width}{A numeric or unit object specifying pair arches plot width.}
+\item{width}{A numeric or unit object specifying pair arches plot width. Class: Positional.}
 
-\item{height}{A numeric or unit object specifying pair arches plot height.}
+\item{height}{A numeric or unit object specifying pair arches plot height. Class: Positional.}
 
 \item{just}{A string specifying the justification of pair arches plot relative to its (x, y)
 location. If there are two values, the first value specifies horizontal
 justification and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
+Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center". Class: Positional.}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x}, \code{y}, \code{width}, or \code{height} are only given as
-numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
+numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.}
 
 \item{draw}{A logical value indicating whether graphics output should be
-produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.}
+produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE. Class: Positional.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object containing
-relevant function parameters.}
+relevant function parameters. Class: Positional.}
 
-\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}.
-
-\end}
+\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.}
 }
 \value{
 Returns a \code{arches} object containing relevant
