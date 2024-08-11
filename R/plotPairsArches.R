@@ -35,8 +35,8 @@
 #' in BEDPE format specifying data to be plotted, or a
 #' \link[InteractionSet]{GInteractions} object. Class: Data.
 #' @param chrom A string specifying the chromosome of region to be plotted. Class: Data.
-#' @param chromstart An integer start position on chromosome to be plotted. Class: Data.
-#' @param chromend An integer end position on chromosome to be plotted. Class: Data.
+#' @param chromstart An integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.
+#' @param chromend An integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}. Class: Data.

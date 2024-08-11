@@ -43,8 +43,8 @@
 #' positive and negative scores and the y-axis of each signal track
 #' should be split. Default value is \code{negData = FALSE}. Options include: TRUE, FALSE. Class: Data.
 #' @param chrom A string specifying the chromosome of region to be plotted. Class: Data.
-#' @param chromstart An integer start position on chromosome to be plotted. Class: Data.
-#' @param chromend An integer end position on chromosome to be plotted. Class: Data.
+#' @param chromstart An integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.
+#' @param chromend An integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}. Class: Data.
@@ -65,7 +65,7 @@
 #' to signal tracks. If \code{scale = TRUE}, the labels will be drawn in the 
 #' top right of the signal tracks. Otherwise, the label will be drawn in the 
 #' top left of the plot. For more customizable labels, 
-#' use \link[plotgardener]{plotText}. Class: Aesthetic.
+#' use \link[plotgardener]{plotText}. Default value is \code{label = NULL}. Class: Aesthetic.
 #' @param bg A character value indicating background color.
 #' Default value is \code{bg = NA}. Class: Aesthetic.
 #' @param baseline A logical value indicating whether to include a

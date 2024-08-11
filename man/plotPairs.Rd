@@ -38,9 +38,9 @@ in BEDPE format specifying data to be plotted, or a
 
 \item{chrom}{A string representing the chromosome of region to be plotted. Class: Data.}
 
-\item{chromstart}{An integer start position on chromosome to be plotted. Class: Data.}
+\item{chromstart}{An integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.}
 
-\item{chromend}{An integer end position on chromosome to be plotted. Class: Data.}
+\item{chromend}{An integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.}
 
 \item{assembly}{A string specifying the default genome assembly or a
 \link[plotgardener]{assembly} object.
@@ -75,8 +75,7 @@ boxes of paired range elements on different rows.
 Default value is \code{spaceHeight = 0.3}. Class: Aesthetic.}
 
 \item{limitLabel}{A logical value indicating whether to draw a "+"
-when not all elements can be plotted in the plotting space. Default 
-value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.}
+when not all elements can be plotted in the plotting space. Default value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.}
 
 \item{baseline}{A logical value indicating whether to include a baseline
 along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.}

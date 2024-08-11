@@ -53,9 +53,9 @@ should be split. Default value is \code{negData = FALSE}. Options include: TRUE,
 
 \item{chrom}{A string specifying the chromosome of region to be plotted. Class: Data.}
 
-\item{chromstart}{An integer start position on chromosome to be plotted. Class: Data.}
+\item{chromstart}{An integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.}
 
-\item{chromend}{An integer end position on chromosome to be plotted. Class: Data.}
+\item{chromend}{An integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.}
 
 \item{assembly}{A string specifying the default genome assembly or a
 \link[plotgardener]{assembly} object.
@@ -83,7 +83,7 @@ Default value is \code{scale = FALSE}. Options include: TRUE, FALSE. Class: Aest
 to signal tracks. If \code{scale = TRUE}, the labels will be drawn in the 
 top right of the signal tracks. Otherwise, the label will be drawn in the 
 top left of the plot. For more customizable labels, 
-use \link[plotgardener]{plotText}. Class: Aesthetic.}
+use \link[plotgardener]{plotText}. Default value is \code{label = NULL}. Class: Aesthetic.}
 
 \item{bg}{A character value indicating background color.
 Default value is \code{bg = NA}. Class: Aesthetic.}

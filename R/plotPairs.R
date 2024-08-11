@@ -31,8 +31,8 @@
 #' in BEDPE format specifying data to be plotted, or a
 #' \link[InteractionSet]{GInteractions} object. Class: Data.
 #' @param chrom A string representing the chromosome of region to be plotted. Class: Data.
-#' @param chromstart An integer start position on chromosome to be plotted. Class: Data.
-#' @param chromend An integer end position on chromosome to be plotted. Class: Data.
+#' @param chromstart An integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.
+#' @param chromend An integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}. Class: Data.
@@ -59,8 +59,7 @@
 #' boxes of paired range elements on different rows.
 #' Default value is \code{spaceHeight = 0.3}. Class: Aesthetic.
 #' @param limitLabel A logical value indicating whether to draw a "+"
-#' when not all elements can be plotted in the plotting space. Default 
-#' value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.
+#' when not all elements can be plotted in the plotting space. Default value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param baseline A logical value indicating whether to include a baseline
 #' along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param baseline.color A string specifying the baseline color.

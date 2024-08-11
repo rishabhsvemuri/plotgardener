@@ -40,9 +40,9 @@ or a \link[GenomicRanges]{GRanges} object. Class: Data.}
 
 \item{chrom}{A string specifying a chromosome of region to be plotted. Class: Data.}
 
-\item{chromstart}{An integer start position on chromosome to be plotted. Class: Data.}
+\item{chromstart}{An integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.}
 
-\item{chromend}{An integer end position on chromosome to be plotted. Class: Data.}
+\item{chromend}{An integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.}
 
 \item{assembly}{A string representing the default genome assembly or a
 \link[plotgardener]{assembly} object.
@@ -89,8 +89,7 @@ range element boxes on different rows, as a fraction of boxHeight.
 Default value is \code{spaceHeight = 0.3}. Class: Aesthetic.}
 
 \item{limitLabel}{A logical value indicating whether to draw a "+"
-when not all elements can be plotted in the plotting space. Default 
-value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.}
+when not all elements can be plotted in the plotting space. Default value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.}
 
 \item{strandSplit}{A logical value indicating whether plus and
 minus-stranded elements should be separated. Elements can only be

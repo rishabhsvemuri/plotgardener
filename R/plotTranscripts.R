@@ -28,8 +28,8 @@
 #' )
 #'
 #' @param chrom A string specifying the chromosome of region to be plotted. Class: Data.
-#' @param chromstart An integer start position on chromosome to be plotted. Class: Data.
-#' @param chromend An integer end position on chromosome to be plotted. Class: Data.
+#' @param chromstart An integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.
+#' @param chromend An integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}. Class: Data.
@@ -55,12 +55,11 @@
 #' between transcripts on different rows, as a fraction of \code{boxHeight}.
 #' Default value is \code{spaceHeight = 0.3}. Class: Aesthetic.
 #' @param limitLabel A logical value indicating whether to draw a "+"
-#' when not all elements can be plotted in the plotting space. Default 
-#' value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.
+#' when not all elements can be plotted in the plotting space. Default value is \code{limitLabel = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param transcriptHighlights A two-column dataframe with a column named
 #' "transcript" or "gene" containing transcript names or their associated gene 
 #' names as strings to highlight and a column named "color" containing 
-#' corresponding highlight colors. Class: Aesthetic.
+#' corresponding highlight colors. Default value is \code{transcriptHighlights = NULL}. Class: Aesthetic.
 #' @param fontsize A numeric specifying text fontsize in points.
 #' Default value is \code{fontsize = 8}. Class: Aesthetic.
 #' @param labels A character value describing the format of

@@ -54,9 +54,9 @@ negative scores. Default value is \code{negData = FALSE}. Options include: TRUE,
 
 \item{chrom}{A string specifying the chromosome of region to be plotted. Class: Data.}
 
-\item{chromstart}{An integer start position on chromosome to be plotted. Class: Data.}
+\item{chromstart}{An integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.}
 
-\item{chromend}{An integer end position on chromosome to be plotted. Class: Data.}
+\item{chromend}{An integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.}
 
 \item{assembly}{A string specifying the default genome assembly or a
 \link[plotgardener]{assembly} object.
