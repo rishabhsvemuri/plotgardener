@@ -40,7 +40,7 @@ interaction counts in sparse upper triangular format. Class: Data.}
 basepairs of each pixel. For hic files, "auto" will attempt
 to choose a resolution based on the size of the region. For
 dataframes, "auto" will attempt to detect the resolution the
-dataframe contains. Default value \code{resolution = "auto"}. Class: Data.}
+dataframe contains. Default value is \code{resolution = "auto"}. Class: Data.}
 
 \item{zrange}{A numeric vector of length 2 specifying the range
 of interaction scores to plot, where extreme values will be set
@@ -80,7 +80,7 @@ Default value is \code{assembly = "hg38"}. Class: Data.}
 \item{palette}{A function describing the color palette to use for
 representing scale of interaction scores.
 Default value is
-\code{palette =  colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}. Class: Aesthetic.}
+\code{palette = colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}. Class: Aesthetic.}
 
 \item{colorTrans}{A string specifying how to scale Hi-C colors.
 Default value is \code{colorTrans = "linear"}. Options include: "linear", "log", "log2", or "log10". Class: Aesthetic.}

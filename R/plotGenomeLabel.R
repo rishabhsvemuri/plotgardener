@@ -27,8 +27,8 @@
 #'
 #' @param chrom A string representing the Chromosome of genome label
 #' or a character vector of chromosomes for a whole genome Manhattan plot. Class: Data.
-#' @param chromstart An integer start of genome label. Class: Data.
-#' @param chromend An integer end of genome label. Class: Data.
+#' @param chromstart An integer start of genome label. Default value is \code{chromstart = NULL}. Class: Data.
+#' @param chromend An integer end of genome label. Default value is \code{chromend = NULL}. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object. Class: Data.
 #' @param fontsize A numeric specifying text fontsize in points.

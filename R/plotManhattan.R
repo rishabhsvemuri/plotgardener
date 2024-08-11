@@ -50,8 +50,8 @@
 #' Default value is \code{sigVal = 5e-08}. Class: Data.
 #' @param chrom A string specifying the chromosome of region to be plotted.
 #' If left \code{NULL}, all chromosomes found in data will be plotted. Class: Data.
-#' @param chromstart An integer start position on chromosome to be plotted. Class: Data.
-#' @param chromend An integer end position on chromosome to be plotted. Class: Data.
+#' @param chromstart An integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.
+#' @param chromend An integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}. Class: Data.
@@ -71,12 +71,12 @@
 #' The lead SNP should be specified as a character with the name slot
 #' \code{"snp"} in the list. Accepted lead SNP aesthetic
 #' features in the list include
-#' \code{fill}, \code{pch}, \code{cex}, \code{fontcolor}, and \code{fontsize}. Class: Aesthetic.
+#' \code{fill}, \code{pch}, \code{cex}, \code{fontcolor}, and \code{fontsize}. Default value is \code{leadSNP = NULL}. Class: Aesthetic.
 #' @param sigLine A logical value indicating whether to draw a line at the
 #' significance level indicated with \code{sigVal}.
 #' Default value is \code{sigLine = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param sigCol A character value specifying the color of
-#' significant data points. Class: Aesthetic.
+#' significant data points. Default value is \code{sigCol = NULL}. Class: Aesthetic.
 #' @param trans A character value specifying the transformation to apply to the
 #' "p" column plotted along the y-axis. For no transformation, set value to the 
 #' empty character "". Default value is \code{trans = "-log10"}. Class: Aesthetic.
@@ -91,10 +91,8 @@
 #' Default value is \code{bg = NA}. Class: Aesthetic.
 #' @param baseline A logical value indicating whether to include a
 #' baseline along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.
-#' @param baseline.color String baseline color. Default value
-#' is \code{baseline.color = "grey"}. Class: Aesthetic.
-#' @param baseline.lwd A numeric baseline line width. Default value
-#' is \code{baseline.lwd = 1}.Class: Aesthetic.
+#' @param baseline.color String baseline color. Default value is \code{baseline.color = "grey"}. Class: Aesthetic.
+#' @param baseline.lwd A numeric baseline line width. Default value is \code{baseline.lwd = 1}. Class: Aesthetic.
 #' @param x A numeric or unit object specifying Manhattan plot x-location. Class: Positional.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying Manhattan plot y-location.

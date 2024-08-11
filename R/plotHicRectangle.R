@@ -53,7 +53,7 @@
 #' Default value is \code{assembly = "hg38"}. Class: Data.
 #' @param palette A function describing the color palette to use for
 #' representing scale of interaction scores. Default value is
-#' \code{palette =  colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}. Class: Aesthetic.
+#' \code{palette = colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}. Class: Aesthetic.
 #' @param colorTrans A string specifying how to scale Hi-C colors. Class: Aesthetic.
 #' Default value is \code{colorTrans = "linear"}. Options include: "linear", "log", "log2", "log10". Class: Aesthetic.
 #' @param flip A logical indicating whether to flip the orientation of

@@ -33,9 +33,9 @@ plotGenomeLabel(
 \item{chrom}{A string representing the Chromosome of genome label
 or a character vector of chromosomes for a whole genome Manhattan plot. Class: Data.}
 
-\item{chromstart}{An integer start of genome label. Class: Data.}
+\item{chromstart}{An integer start of genome label. Default value is \code{chromstart = NULL}. Class: Data.}
 
-\item{chromend}{An integer end of genome label. Class: Data.}
+\item{chromend}{An integer end of genome label. Default value is \code{chromend = NULL}. Class: Data.}
 
 \item{assembly}{A string specifying the default genome assembly or a
 \link[plotgardener]{assembly} object. Class: Data.}

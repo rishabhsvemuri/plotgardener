@@ -34,7 +34,7 @@
 #' basepairs of each pixel. For hic files, "auto" will attempt
 #' to choose a resolution based on the size of the region. For
 #' dataframes, "auto" will attempt to detect the resolution the
-#' dataframe contains. Default value \code{resolution = "auto"}. Class: Data.
+#' dataframe contains. Default value is \code{resolution = "auto"}. Class: Data.
 #' @param zrange A numeric vector of length 2 specifying the range
 #' of interaction scores to plot, where extreme values will be set
 #' to the max or min. Default value \code{resolution = NULL}. Class: Data.
@@ -63,7 +63,7 @@
 #' @param palette A function describing the color palette to use for
 #' representing scale of interaction scores.
 #' Default value is
-#' \code{palette =  colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}. Class: Aesthetic.
+#' \code{palette = colorRampPalette(brewer.pal(n = 9, "YlGnBu"))}. Class: Aesthetic.
 #' @param colorTrans A string specifying how to scale Hi-C colors.
 #' Default value is \code{colorTrans = "linear"}. Options include: "linear", "log", "log2", or "log10". Class: Aesthetic.
 #' @param half A character value indicating which diagonal regions to plot.
