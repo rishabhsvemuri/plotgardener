@@ -17,49 +17,50 @@
 #' )
 #'
 #' @param x0 A numeric vector or unit object indicating the
-#' starting x-values of the line segments.
+#' starting x-values of the line segments. Class: Positional.
 #' @param y0 A numeric vector, unit object, or a character vector
 #' of values containing a "b" combined with a numeric value specifying
 #' starting y-values of the line segments.
 #' The character vector will place starting y-values relative to the
 #' bottom of the most recently plotted plot according to the
-#' units of the plotgardener page.
+#' units of the plotgardener page. Class: Positional.
 #' @param x1 A numeric vector or unit object indicating the stopping
-#' x-values of the line segments.
+#' x-values of the line segments. Class: Positional.
 #' @param y1 A numeric vector, unit object, or a character vector of v
 #' alues containing a "b" combined with a numeric value specifying
-#' stopping y-values of the line segments.
+#' stopping y-values of the line segments. 
 #' The character vector will place stopping y-values relative to the
 #' bottom of the most recently plotted plot according to the
-#' units of the plotgardener page.
+#' units of the plotgardener page. Class: Positional.
 #' @param default.units A string indicating the default units to use
 #' if \code{x0}, \code{y0}, \code{x1}, or \code{y1} are only given as
 #' numeric vectors. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
+#' Class: Positional.
 #' @param linecolor A character value specifying segment line color.
-#' Default value is \code{linecolor = "black"}.
+#' Default value is \code{linecolor = "black"}. Class: Aesthetic.
 #' @param lwd A numeric specifying segment line width.
-#' Default value is \code{lwd = 1}.
+#' Default value is \code{lwd = 1}. Class: Aesthetic.
 #' @param lty A numeric specifying segment line type.
-#' Default value is \code{lty = 1}.
+#' Default value is \code{lty = 1}. Class: Aesthetic.
 #' @param lineend A character value specifying line end style.
-#' Default value is \code{lineend = "butt"}. Options include: "round", "butt", "square".
+#' Default value is \code{lineend = "butt"}. Options include: "round", "butt", "square". 
 #' \itemize{
 #' \item{\code{"round"}: Segment ends are rounded.}
 #' \item{\code{"butt"}: Segment ends end exactly where ended.}
 #' \item{\code{"square"}: Segment ends are squared.}
-#' }
+#' } Class: Aesthetic.
 #' @param linejoin A character value specifying line join style.
-#' Default value is \code{linejoin = "mitre"}. Options include: "round", "mitre", "bevel"
+#' Default value is \code{linejoin = "mitre"}.  Options include: "round", "mitre", "bevel". 
 #' \itemize{
 #' \item{\code{"round"}: }{Line joins are rounded.}
 #' \item{\code{"mitre"}: }{Line joins are sharp corners.}
 #' \item{\code{"bevel"}: }{Line joins are flattened corners.}
-#' }
+#' } Class: Aesthetic.
 #' @param arrow A list describing arrow heads to place at either end of
-#' the line segments, as produced by the \link[grid]{arrow} function.
+#' the line segments, as produced by the \link[grid]{arrow} function. Class: Aesthetic.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
-#' relevant function parameters.
-#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#' relevant function parameters. Class: Positional.
+#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional. 
 #'
 #' @return Returns a \code{segments} object containing relevant
 #' placement and \link[grid]{grob} information.

@@ -20,40 +20,40 @@ plotCircle(
 }
 \arguments{
 \item{x}{A numeric vector or unit object specifying circle
-x-locations relative to center.}
+x-locations relative to center. Class: Positional.}
 
 \item{y}{A numeric vector, unit object, or a character vector
 of values containing a "b" combined with a numeric value
 specifying circle y-locations relative to center.
 The character vector will place circle y-locations relative to
 the bottom of the most recently plotted plot according
-to the units of the plotgardener page.}
+to the units of the plotgardener page. Class: Positional.}
 
-\item{r}{A numeric vector or unit object specifying radii.}
+\item{r}{A numeric vector or unit object specifying radii. Class: Aesthetic.}
 
 \item{default.units}{A string indicating the default units to use
 if \code{r}, \code{x}, or \code{y} are only given as numerics or
-numeric vectors. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
+numeric vectors. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.}
 
 \item{linecolor}{A character value specifying circle line color.
-Default value is \code{linecolor = "black"}.}
+Default value is \code{linecolor = "black"}. Class: Aesthetic.}
 
 \item{lwd}{A numeric specifying circle line width.
-Default value is \code{lwd = 1}.}
+Default value is \code{lwd = 1}. Class: Aesthetic.}
 
 \item{lty}{A numeric specifying circle line type.
-Default value is \code{lty = 1}.}
+Default value is \code{lty = 1}. Class: Aesthetic.}
 
 \item{fill}{A character value specifying circle fill color.
-Default value is \code{fill = NA}.}
+Default value is \code{fill = NA}. Class: Aesthetic.}
 
 \item{alpha}{A numeric value specifying color transparency.
-Default value is \code{alpha = 1}.}
+Default value is \code{alpha = 1}. Class: Aesthetic.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
 containing relevant function parameters.}
 
-\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}.}
+\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.}
 }
 \value{
 Returns a \code{circle} object containing

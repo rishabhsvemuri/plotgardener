@@ -21,46 +21,46 @@ plotPolygon(
 }
 \arguments{
 \item{x}{A numeric vector or unit object specifying polygon
-vertex x-locations.}
+vertex x-locations. Class: Positional.}
 
 \item{y}{A numeric vector, unit object, or a character vector
 of values containing a "b" combined with a numeric value specifying
 polygon vertex y-locations.
 The character vector will place polygon vertex y-locations relative
 to the bottom of the most recently plotted plot according
-to the units of the plotgardener page.}
+to the units of the plotgardener page. Class: Positional.}
 
 \item{default.units}{A string indicating the default units to use
 if \code{x} or \code{y} are only given as numeric vectors.
-Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
+Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.}
 
 \item{linecolor}{A character value specifying polygon line color.
-Default value is \code{linecolor = "black"}.}
+Default value is \code{linecolor = "black"}. Class: Aesthetic.}
 
 \item{lwd}{A numeric specifying polygon line width.
-Default value is \code{lwd = 1}.}
+Default value is \code{lwd = 1}. Class: Aesthetic.}
 
 \item{lty}{A numeric specifying polygon line type.
-Default value is \code{lty = 1}.}
+Default value is \code{lty = 1}. Class: Aesthetic.}
 
 \item{fill}{A character value specifying polygon fill color.
-Default value is \code{fill = NA}.}
+Default value is \code{fill = NA}. Class: Aesthetic.}
 
 \item{alpha}{Numeric value specifying color transparency.
-Default value is \code{alpha = 1}.}
+Default value is \code{alpha = 1}. Class: Aesthetic.}
 
 \item{id}{A numeric vector used to separate locations in \code{x} and
 \code{y} into multiple polygons. All locations with the same \code{id}
-belong to the same polygon.}
+belong to the same polygon. Class: Positional.}
 
 \item{id.lengths}{A numeric vector used to separate locations in
 \code{x} and \code{y} into multiple polygons. Specifies consecutive
-blocks of locations which make up separate polygons.}
+blocks of locations which make up separate polygons. Class: Positional.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object containing
-relevant function parameters.}
+relevant function parameters. Class: Positional.}
 
-\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}.}
+\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.}
 }
 \value{
 Returns a \code{polygon} object containing relevant

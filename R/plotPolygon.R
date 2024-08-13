@@ -16,35 +16,35 @@
 #' )
 #'
 #' @param x A numeric vector or unit object specifying polygon
-#' vertex x-locations.
+#' vertex x-locations. Class: Positional.
 #' @param y A numeric vector, unit object, or a character vector
 #' of values containing a "b" combined with a numeric value specifying
 #' polygon vertex y-locations.
 #' The character vector will place polygon vertex y-locations relative
 #' to the bottom of the most recently plotted plot according
-#' to the units of the plotgardener page.
+#' to the units of the plotgardener page. Class: Positional.
 #' @param default.units A string indicating the default units to use
 #' if \code{x} or \code{y} are only given as numeric vectors.
-#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
+#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.
 #' @param linecolor A character value specifying polygon line color.
-#' Default value is \code{linecolor = "black"}.
+#' Default value is \code{linecolor = "black"}. Class: Aesthetic.
 #' @param lwd A numeric specifying polygon line width.
-#'  Default value is \code{lwd = 1}.
+#'  Default value is \code{lwd = 1}. Class: Aesthetic.
 #' @param lty A numeric specifying polygon line type.
-#' Default value is \code{lty = 1}.
+#' Default value is \code{lty = 1}. Class: Aesthetic.
 #' @param fill A character value specifying polygon fill color.
-#' Default value is \code{fill = NA}.
+#' Default value is \code{fill = NA}. Class: Aesthetic.
 #' @param alpha Numeric value specifying color transparency.
-#' Default value is \code{alpha = 1}.
+#' Default value is \code{alpha = 1}. Class: Aesthetic.
 #' @param id A numeric vector used to separate locations in \code{x} and
 #' \code{y} into multiple polygons. All locations with the same \code{id}
-#' belong to the same polygon.
+#' belong to the same polygon. Class: Positional.
 #' @param id.lengths A numeric vector used to separate locations in
 #' \code{x} and \code{y} into multiple polygons. Specifies consecutive
-#' blocks of locations which make up separate polygons.
+#' blocks of locations which make up separate polygons. Class: Positional.
 #' @param params An optional \link[plotgardener]{pgParams} object containing
-#' relevant function parameters.
-#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#' relevant function parameters. Class: Positional.
+#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.
 #'
 #' @return Returns a \code{polygon} object containing relevant
 #' placement and \link[grid]{grob} information.

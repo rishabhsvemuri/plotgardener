@@ -16,38 +16,39 @@
 #'     ...
 #' )
 #'
-#' @param x A numeric vector or unit object specifying rectangle x-locations.
+#' @param x A numeric vector or unit object specifying rectangle x-locations. Class: Positional.
 #' @param y A numeric vector, unit object, or a character vector of values
 #' containing a "b" combined with a numeric value specifying
 #' rectangle y-locations.
 #' The character vector will place rectangle y-locations relative to
 #' the bottom of the most recently plotted plot according to
-#' the units of the plotgardener page.
-#' @param width A numeric vector or unit object specifying rectangle widths.
-#' @param height A numeric vector or unit object specifying rectangle heights.
-#' @param just Justification of rectangle relative to its (x, y) location.
+#' the units of the plotgardener page. Class: Positional.
+#' @param width A numeric vector or unit object specifying rectangle widths. Class: Positional.
+#' @param height A numeric vector or unit object specifying rectangle heights. Class: Positional.
+#' @param just Justification of rectangle relative to its (x, y) location. 
 #' If there are two values, the first value specifies horizontal justification
 #' and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-#' Default value is \code{just = "center"}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
+#' Default value is \code{just = "center"}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".  
+#' Class: Positional.
 #' @param default.units A string indicating the default units to use if
 #' \code{x}, \code{y}, \code{width}, and \code{height} are only given as
 #' numerics or numeric vectors.
-#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
-#' @param linecolor A character value specifying rectangle line color.
-#' Default value is \code{linecolor = "black"}.
+#' Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.
+#' @param linecolor A character value specifying rectangle line color. 
+#' Default value is \code{linecolor = "black"}. Class: Aesthetic.
 #' @param lwd A numeric specifying rectangle line width.
-#' Default value is \code{lwd = 1}.
+#' Default value is \code{lwd = 1}. Class: Aesthetic.
 #' @param lty A numeric specifying rectangle line type.
-#' Default value is \code{lty = 1}.
+#' Default value is \code{lty = 1}. Class: Aesthetic.
 #' @param fill A character value specifying rectangle fill color.
-#' Default value is \code{fill = NA}.
+#' Default value is \code{fill = NA}. Class: Aesthetic.
 #' @param alpha Numeric value specifying color transparency.
-#' Default value is \code{alpha = 1}.
+#' Default value is \code{alpha = 1}. Class: Aesthetic.
 #' @param params An optional \link[plotgardener]{pgParams} object
-#' containing relevant function parameters.
-#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#' containing relevant function parameters. Class: Positional.
+#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.
 #'
 #' @return Returns a \code{rect} object containing
 #' relevant placement and \link[grid]{grob} information.
