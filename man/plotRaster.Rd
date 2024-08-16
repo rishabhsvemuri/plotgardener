@@ -18,40 +18,41 @@ plotRaster(
 )
 }
 \arguments{
-\item{image}{Any R object that can be coerced to a raster object.}
+\item{image}{Any R object that can be coerced to a raster object. Class: Positional.}
 
-\item{x}{A numeric vector or unit object specifying raster x-locations.}
+\item{x}{A numeric vector or unit object specifying raster x-locations. Class: Positional.}
 
 \item{y}{A numeric vector, unit object, or a character vector of values
 containing a "b" combined with a numeric value specifying
 raster y-locations.
 The character vector will place raster y relative to the bottom
 of the most recently plotted plot according to the units
-of the plotgardener page.}
+of the plotgardener page. Class: Positional.}
 
-\item{width}{A numeric vector or unit object specifying raster widths.}
+\item{width}{A numeric vector or unit object specifying raster widths. Class: Positional.}
 
-\item{height}{A numeric vector or unit object specifying raster heights.}
+\item{height}{A numeric vector or unit object specifying raster heights. Class: Positional.}
 
 \item{just}{A string specifying the justification of text relative to its (x, y) location.
 If there are two values, the first value specifies horizontal
-justification and the second value specifies vertical justification.
+justification and the second value specifies vertical justification. 
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and
-\code{"top"}. Default value is \code{just = "center"}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
+\code{"top"}. Default value is \code{just = "center"}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
+Class: Positional.}
 
 \item{default.units}{A string indicating the default units
 to use if \code{x}, \code{y}, \code{width}, or \code{height}
 are only given as numerics or numeric vectors.
-Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
+Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.}
 
 \item{interpolate}{A logical value indicating whether to linearly
-interpolate the image. Default value is \code{interpolate = TRUE}.}
+interpolate the image. Default value is \code{interpolate = TRUE}. Class: Aesthetic.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
-containing relevant function parameters.}
+containing relevant function parameters. Class: Positional.}
 
-\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}.}
+\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.}
 }
 \value{
 Returns a \code{raster} object containing

@@ -22,46 +22,54 @@
 #' )
 #'
 #' @param legend A character or expression vector to appear in the legend.
+#' Class: Data.
 #' @param fill If specified, this argument will produce boxes filled with
-#' the specified colors to appear beside the legend text.
+#' the specified colors to appear beside the legend text. Class: Aesthetic.
 #' @param pch A numeric vector plotting symbols appearing in the legend.
-#' @param lty The line types for lines appearing in the legend.
+#' Class: Data.
+#' @param lty The line types for lines appearing in the legend. 
+#' Class: Aesthetic.
 #' @param orientation A string specifying legend orientation.
-#' Default value is \code{orientation = "v"}. Options include: "v", "h".
+#' Default value is \code{orientation = "v"}. Options include: "v", "h". 
 #' \itemize{
 #' \item{\code{"v"}: }{Vertical legend orientation.}
 #' \item{\code{"h"}: }{Horizontal legend orientation.}
 #' }
+#' Class: Positional.
 #' @param title A character value giving a title to be placed at
-#' the top of the legend.
+#' the top of the legend. Class: Aesthetic.
 #' @param fontsize A numeric specifying text fontsize in points.
-#' Default value is \code{fontsize = 10}.
+#' Default value is \code{fontsize = 10}. Class: Aesthetic.
 #' @param border A logical value indicating whether to add a border
 #' around heatmap legend. Default value is \code{border = TRUE}. Options include: TRUE, FALSE.
+#' Class: Aesthetic.
 #' @param bg A character value indicating background color.
-#' Default value is \code{bg = NA}.
-#' @param x A numeric or unit object specifying legend x-location.
+#' Default value is \code{bg = NA}. Class: Aesthetic.
+#' @param x A numeric or unit object specifying legend x-location. Class: Positional.
 #' @param y A numeric, unit object, or character containing a "b"
 #' combined with a numeric value specifying legend y-location.
 #' The character value will
 #' place the legend y relative to the bottom of the most recently
-#' plotted plot according to the units of the plotgardener page.
-#' @param width A numeric or unit object specifying legend width.
-#' @param height A numeric or unit object specifying legend height.
+#' plotted plot according to the units of the plotgardener page. Class: Positional.
+#' @param width A numeric or unit object specifying legend width. Class: Positional.
+#' @param height A numeric or unit object specifying legend height. Class: Positional.
 #' @param just A string specifying the justification of legend relative to its (x, y) location.
 #' If there are two values, the first value specifies horizontal
 #' justification and the second value specifies vertical justification.
 #' Possible string values are: \code{"left"}, \code{"right"},
 #' \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
 #' Default value is \code{just = c("left", "top")}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".
+#' Class: Positional.
 #' @param default.units A string indicating the default units to use
 #' if \code{x}, \code{y}, \code{width}, or \code{height} are only given
 #' as numerics. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
+#' Class: Positional.
 #' @param draw A logical value indicating whether graphics output should
 #' be produced. Default value is \code{draw = TRUE}. Options include: TRUE, FALSE.
+#' Class: Positional.
 #' @param params An optional \link[plotgardener]{pgParams} object
-#' containing relevant function parameters.
-#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#' containing relevant function parameters. Class: Positional.
+#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.
 #'
 #' @return Returns a \code{legend} object containing relevant
 #' placement and \link[grid]{grob} information.

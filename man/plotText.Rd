@@ -19,45 +19,45 @@ plotText(
 )
 }
 \arguments{
-\item{label}{Character or expression of text to be plotted.}
+\item{label}{Character or expression of text to be plotted. Class: Aesthetic.}
 
 \item{fontcolor}{A character value specifying text fontcolor.
-Default value is \code{fontcolor = "black"}.}
+Default value is \code{fontcolor = "black"}. Class: Aesthetic.}
 
 \item{fontsize}{A numeric specifying text fontsize in points.
-Default value is \code{fontsize = 12}.}
+Default value is \code{fontsize = 12}. Class: Aesthetic.}
 
 \item{rot}{A numeric specifying the angle to rotate the text.
-Default value is \code{rot = 0}.}
+Default value is \code{rot = 0}. Class: Aesthetic.}
 
 \item{check.overlap}{A logical value to indicate whether to check
-for and omit overlapping text.
-Default value is \code{check.overlap = FALSE}. Options include: TRUE, FALSE.}
+for and omit overlapping text. 
+Default value is \code{check.overlap = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.}
 
-\item{x}{A numeric vector or unit object specifying text x-location.}
+\item{x}{A numeric vector or unit object specifying text x-location. Class: Positional.}
 
 \item{y}{A numeric vector, unit object, or a character vector of
 values containing a "b" combined with a numeric value
 specifying text y-locations.
 The character vector will place text y-locations relative to the
 bottom of the most recently plotted plot according to the
-units of the plotgardener page.}
+units of the plotgardener page. Class: Positional.}
 
 \item{just}{Justification of text relative to its (x, y) location.
 If there are two values, the first value specifies horizontal
 justification and the second value specifies vertical justification.
 Possible string values are: \code{"left"}, \code{"right"},
 \code{"centre"}, \code{"center"}, \code{"bottom"}, and \code{"top"}.
-Default value is \code{just = "center"}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center".}
+Default value is \code{just = "center"}. Options include: c("left", "top"), c("left", "bottom"), "left", c("right", "top"), c("right", "bottom"), "right", "top", "bottom", "center". Class: Positional.}
 
 \item{default.units}{A string indicating the default units to use if
 \code{x} or \code{y} are only given as numerics or numeric vectors.
-Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".}
+Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.}
 
 \item{params}{An optional \link[plotgardener]{pgParams} object
-containing relevant function parameters.}
+containing relevant function parameters. Class: Positional.}
 
-\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}.}
+\item{...}{Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.}
 }
 \value{
 Returns a \code{text} object containing relevant

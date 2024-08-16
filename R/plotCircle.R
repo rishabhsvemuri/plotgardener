@@ -15,30 +15,30 @@
 #' )
 #'
 #' @param x A numeric vector or unit object specifying circle
-#' x-locations relative to center.
+#' x-locations relative to center. Class: Positional.
 #' @param y A numeric vector, unit object, or a character vector
 #' of values containing a "b" combined with a numeric value
 #' specifying circle y-locations relative to center.
 #' The character vector will place circle y-locations relative to
 #' the bottom of the most recently plotted plot according
-#' to the units of the plotgardener page.
-#' @param r A numeric vector or unit object specifying radii.
+#' to the units of the plotgardener page. Class: Positional.
+#' @param r A numeric vector or unit object specifying radii. Class: Aesthetic.
 #' @param default.units A string indicating the default units to use
 #' if \code{r}, \code{x}, or \code{y} are only given as numerics or
-#' numeric vectors. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points".
+#' numeric vectors. Default value is \code{default.units = "inches"}. Options include: "inches", "cm", "npc", "snpc", "native", "mm", "points". Class: Positional.
 #' @param linecolor A character value specifying circle line color.
-#' Default value is \code{linecolor = "black"}.
+#' Default value is \code{linecolor = "black"}. Class: Aesthetic.
 #' @param lwd A numeric specifying circle line width.
-#' Default value is \code{lwd = 1}.
+#' Default value is \code{lwd = 1}. Class: Aesthetic.
 #' @param lty A numeric specifying circle line type.
-#' Default value is \code{lty = 1}.
+#' Default value is \code{lty = 1}. Class: Aesthetic.
 #' @param fill A character value specifying circle fill color.
-#' Default value is \code{fill = NA}.
+#' Default value is \code{fill = NA}. Class: Aesthetic.
 #' @param alpha A numeric value specifying color transparency.
-#' Default value is \code{alpha = 1}.
+#' Default value is \code{alpha = 1}. Class: Aesthetic.
 #' @param params An optional \link[plotgardener]{pgParams} object
 #' containing relevant function parameters.
-#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}.
+#' @param ... Additional grid graphical parameters. See \link[grid]{gpar}. Class: Positional.
 #'
 #' @return Returns a \code{circle} object containing
 #' relevant placement and \link[grid]{grob} information.
