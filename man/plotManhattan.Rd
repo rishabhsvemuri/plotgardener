@@ -99,7 +99,7 @@ significant data points. Default value is \code{sigCol = NULL}. Class: Aesthetic
 empty character "". Default value is \code{trans = "-log10"}. Class: Aesthetic.}
 
 \item{range}{A numeric vector of length 2 specifying the y-range
-of p-values to plot (c(min, max)). Class: Positional.}
+of p-values to plot (c(min, max)). Default value is \code{range = NULL}. Class: Positional.}
 
 \item{yscale_reverse}{A logical value indicating whether to reverse the y-scale
 and order points from max to min. Default value is \code{yscale_reverse = FALSE}. Options include: TRUE, FALSE. Class: Positional.}

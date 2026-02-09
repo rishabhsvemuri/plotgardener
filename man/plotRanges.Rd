@@ -63,7 +63,7 @@ Options include: NA, “fill”. Class: Aesthetic.
 
 \item{order}{A character value specifying how to order pileup data
 before assigning rows. Default value is \code{order = "width"}. Options 
-include: "width", "random". Class: Aesthetic.
+include: "width", "random". Options include: "width", "random". Class: Aesthetic.
 \itemize{
 \item{\code{"width"}: }{Ordered by decreasing width of elements.}
 \item{\code{"random"}: }{Ordered randomly in each function call.}
