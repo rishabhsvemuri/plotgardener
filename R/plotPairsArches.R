@@ -35,8 +35,8 @@
 #' in BEDPE format specifying data to be plotted, or a
 #' \link[InteractionSet]{GInteractions} object. Class: Data.
 #' @param chrom A string specifying the chromosome of region to be plotted. Class: Data.
-#' @param chromstart An integer start position on chromosome to be plotted. Default value is \code{chromstart = NULL}. Class: Data.
-#' @param chromend An integer end position on chromosome to be plotted. Default value is \code{chromend = NULL}. Class: Data.
+#' @param chromstart An integer start position on chromosome to be plotted. Class: Data.
+#' @param chromend An integer end position on chromosome to be plotted. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
 #' \link[plotgardener]{assembly} object.
 #' Default value is \code{assembly = "hg38"}. Class: Data.
@@ -50,9 +50,9 @@
 #' the x-axis. Default value is \code{flip = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param curvature A numeric indicating the number of points along the
 #' arch curvature. Default value is \code{curvature = 5}. Class: Aesthetic.
-#' @param archHeight A numeric value, numeric vector, or column name 
+#' @param archHeight A numeric value, numeric vector, or a string column name 
 #' in data specifying the arch heights. When NULL, all arches will be the 
-#' same height, filling up the given plot area. Class: Aesthetic.
+#' same height, filling up the given plot area. Default value is \code{archHeight = NULL}. Class: Aesthetic.
 #' @param fill A character value, a vector, or a 
 #' \link[plotgardener]{colorby} object specifying fill colors of arches.
 #' Default value is \code{fill = #1f4297"}. Class: Aesthetic.
@@ -75,7 +75,7 @@
 #' any arches that overlap the given genomic region but do not 
 #' have an anchor in that region. Default value is \code{clip.noAnchor = TRUE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param range A numeric vector of length 2 specifying the y-range
-#' of \code{archHeight} to plot (c(min, max)). Class: Aesthetic.
+#' of \code{archHeight} to plot (c(min, max)). Default value is \code{range = c(0,1)}. Class: Aesthetic.
 #' @param baseline A logical value indicating whether to include
 #' a baseline along the x-axis. Default value is \code{baseline = FALSE}. Options include: TRUE, FALSE. Class: Aesthetic.
 #' @param baseline.color A string baseline color.

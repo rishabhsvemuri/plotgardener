@@ -83,7 +83,7 @@ This is typically used for a square Hi-C plot made with
 \code{plotHicSquare}.}
 }}
 
-\item{at}{A numeric vector of x-value locations for tick marks. Default value is \code{at = NULL}. Class: Positional.}
+\item{at}{A numeric vector of x-value locations for tick marks. Class: Positional.}
 
 \item{tcl}{A numeric specifying the length of tickmarks as a
 fraction of text height. Default value is \code{tcl = 0.5}. Class: Positional.}

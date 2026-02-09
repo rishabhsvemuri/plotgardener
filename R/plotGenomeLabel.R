@@ -30,7 +30,7 @@
 #' @param chromstart An integer start of genome label. Default value is \code{chromstart = NULL}. Class: Data.
 #' @param chromend An integer end of genome label. Default value is \code{chromend = NULL}. Class: Data.
 #' @param assembly A string specifying the default genome assembly or a
-#' \link[plotgardener]{assembly} object. Class: Data.
+#' \link[plotgardener]{assembly} object. Default value is \code{assembly = "hg38"}. Class: Data.
 #' @param fontsize A numeric specifying text fontsize in points.
 #' Default value is \code{fontsize = 10}. Class: Aesthetic.
 #' @param fontcolor A character value indicating the color for text.

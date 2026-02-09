@@ -57,7 +57,7 @@
 #' @param ymax A numeric specifying the fraction of the max y-value
 #' to set as the height of the plot. Default value is \code{ymax = 1}. Class: Aesthetic.
 #' @param range A numeric vector of length 2 specifying the y-range
-#' of data to plot (c(min, max)). Class: Aesthetic.
+#' of data to plot (c(min, max)). Default value is \code{range = c(0,1)}. Class: Aesthetic.
 #' @param scale A logical value indicating whether to include a data
 #' scale label in the top left corner of the plot. Class: Aesthetic.
 #' Default value is \code{scale = FALSE}. Options include: TRUE, FALSE.

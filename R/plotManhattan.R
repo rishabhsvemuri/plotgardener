@@ -81,7 +81,7 @@
 #' "p" column plotted along the y-axis. For no transformation, set value to the 
 #' empty character "". Default value is \code{trans = "-log10"}. Class: Aesthetic.
 #' @param range A numeric vector of length 2 specifying the y-range
-#' of p-values to plot (c(min, max)). Class: Positional.
+#' of p-values to plot (c(min, max)). Default value is \code{range = NULL}. Class: Positional.
 #' @param yscale_reverse A logical value indicating whether to reverse the y-scale
 #' and order points from max to min. Default value is \code{yscale_reverse = FALSE}. Options include: TRUE, FALSE. Class: Positional.
 #' @param space A numeric value indicating the space between each

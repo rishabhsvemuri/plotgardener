@@ -32,8 +32,7 @@ plotPairs(
 )
 }
 \arguments{
-\item{data}{A string specifying the BEDPE file path, a dataframe
-in BEDPE format specifying data to be plotted, or txt file in BEDPE format. Class: Data.}
+\item{data}{A string specifying the BEDPE file path, a dataframe in BEDPE format specifying data to be plotted, or txt file in BEDPE format. Class: Data.}
 
 \item{chrom}{A string representing the chromosome of region to be plotted. Class: Data.}
 

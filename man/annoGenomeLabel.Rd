@@ -55,7 +55,7 @@ along the genome label. Default value is \code{scale = "bp"}. Options are:
 start and stop labels. Default value is \code{commas = TRUE}.}
 
 \item{sequence}{A logical value indicating whether to include sequence
-information above the label of an x-axis (only at appropriate resolutions). Options include: TRUE, FALSE.}
+information above the label of an x-axis (only at appropriate resolutions) Options include: TRUE, FALSE.}
 
 \item{boxWidth}{A numeric value indicating the width of the boxes
 representing sequence information at appropriate resolutions.

@@ -12,13 +12,13 @@
 #' )
 #'
 #' @param plot Plot object to annotate with y-axis.
-#' @param at A numeric vector of y-value locations for tick marks.
+#' @param at A numeric vector of y-value locations for tick marks. Default value is \code{at = NULL}.
 #' @param label A logical value indicating whether to draw the labels
 #' on the tick marks, or an expression or character vector which specify
 #' the labels to use.
 #' If not logical, must be the same length as the \code{at} argument.
 #' @param main A logical value indicating whether to draw the y-axis at
-#' the left of the plot. Default value is \code{main = TRUE}. Options are:
+#' the left of the plot. Default value is \code{main = TRUE}. Options include: TRUE, FALSE. Options are:
 #' \itemize{
 #' \item{\code{TRUE}: }{y-axis is drawn at the left of the plot.}
 #' \item{\code{FALSE}: }{y-axis is drawn at the right of the plot.}

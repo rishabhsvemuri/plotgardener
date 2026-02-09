@@ -43,7 +43,7 @@
 #' @param commas A logical value indicating whether to include commas in
 #' start and stop labels. Default value is \code{commas = TRUE}.
 #' @param sequence A logical value indicating whether to include sequence
-#' information above the label of an x-axis (only at appropriate resolutions).
+#' information above the label of an x-axis (only at appropriate resolutions) Options include: TRUE, FALSE.
 #' @param boxWidth A numeric value indicating the width of the boxes
 #' representing sequence information at appropriate resolutions.
 #' Default value is \code{boxWidth = 0.5}.
@@ -57,7 +57,7 @@
 #' This is typically used for a square Hi-C plot made with
 #' \code{plotHicSquare}.}
 #' }
-#' @param at A numeric vector of x-value locations for tick marks.
+#' @param at A numeric vector of x-value locations for tick marks. Default value is \code{at = NULL}.
 #' @param tcl A numeric specifying the length of tickmarks as a fraction of
 #' text height. Default value is \code{tcl = 0.5}.
 #' @param x A numeric or unit object specifying genome label x-location.
