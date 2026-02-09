@@ -55,7 +55,7 @@ along the genome label. Default value is \code{scale = "bp"}. Options are:
 start and stop labels. Default value is \code{commas = TRUE}.}
 
 \item{sequence}{A logical value indicating whether to include sequence
-information above the label of an x-axis (only at appropriate resolutions).}
+information above the label of an x-axis (only at appropriate resolutions). Options include: TRUE, FALSE.}
 
 \item{boxWidth}{A numeric value indicating the width of the boxes
 representing sequence information at appropriate resolutions.
@@ -72,7 +72,7 @@ This is typically used for a square Hi-C plot made with
 \code{plotHicSquare}.}
 }}
 
-\item{at}{A numeric vector of x-value locations for tick marks.}
+\item{at}{A numeric vector of x-value locations for tick marks. Default value is \code{at = NULL}.}
 
 \item{tcl}{A numeric specifying the length of tickmarks as a fraction of
 text height. Default value is \code{tcl = 0.5}.}

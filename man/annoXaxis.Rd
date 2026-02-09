@@ -18,11 +18,11 @@ annoXaxis(
 \arguments{
 \item{plot}{Plot object to annotate with x-axis.}
 
-\item{at}{A numeric vector of x-value locations for tick marks.}
+\item{at}{A numeric vector of x-value locations for tick marks. Default value is \code{at = NULL}.}
 
 \item{label}{A logical value indicating whether to draw the labels on
 the tick marks, or an expression or character vector which specify
-the labels to use.
+the labels to use. Options include: TRUE, FALSE.
 If not logical, must be the same length as the \code{at} argument.}
 
 \item{main}{A logical value indicating whether to draw the x-axis at the
