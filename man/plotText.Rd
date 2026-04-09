@@ -19,7 +19,7 @@ plotText(
 )
 }
 \arguments{
-\item{label}{Character or expression of text to be plotted. Class: Aesthetic.}
+\item{label}{A character or expression of text to be plotted. Class: Aesthetic.}
 
 \item{fontcolor}{A character value specifying text fontcolor.
 Default value is \code{fontcolor = "black"}. Class: Aesthetic.}

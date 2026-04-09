@@ -15,7 +15,7 @@
 #'     ...
 #' )
 #'
-#' @param label Character or expression of text to be plotted.
+#' @param label A character or expression of text to be plotted.
 #' @param fontcolor A character value specifying text fontcolor.
 #' Default value is \code{fontcolor = "black"}.
 #' @param fontsize A numeric specifying text fontsize in points.

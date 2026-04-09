@@ -14,7 +14,7 @@
 #'     ...
 #' )
 #'
-#' @param label Character or expression of text to be plotted. Class: Aesthetic. 
+#' @param label A character or expression of text to be plotted. Class: Aesthetic. 
 #' @param fontcolor A character value specifying text fontcolor.
 #' Default value is \code{fontcolor = "black"}. Class: Aesthetic.
 #' @param fontsize A numeric specifying text fontsize in points.

@@ -20,7 +20,7 @@ annoText(
 )
 }
 \arguments{
-\item{label}{Character or expression of text to be plotted.}
+\item{label}{A character or expression of text to be plotted.}
 
 \item{fontcolor}{A character value specifying text fontcolor.
 Default value is \code{fontcolor = "black"}.}
